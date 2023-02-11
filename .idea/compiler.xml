@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="main_api" />
+        <module name="write_api" />
+        <module name="read_api" />
+        <module name="eureka" />
+        <module name="commons" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api" target="11" />
+      <module name="commons" target="11" />
+      <module name="eureka" target="11" />
+      <module name="main_api" target="11" />
+      <module name="read_api" target="11" />
+      <module name="write_api" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="eureka" options="-parameters" />
+      <module name="main_api" options="-parameters" />
+      <module name="read_api" options="-parameters" />
+      <module name="write_api" options="-parameters" />
+    </option>
+  </component>
+</project>

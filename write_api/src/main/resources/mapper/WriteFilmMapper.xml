@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cinema.write_api.mapper.WriteFilmMapper">
+
+    <insert id="insert" parameterType="Film">
+        inset into cinema.t_film
+        (id,name,releaseTime,type,status,region,introduction,hot,cover,duration)
+        values
+        (#{id},#{name},#{releaseTime},#{type},#{status},#{region},#{introduction},#{hot},#{cover},#{duration})
+    </insert>
+</mapper>

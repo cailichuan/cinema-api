@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="create_data.dao.WorkerEvaluateMapper">
+
+    <insert id="insert" parameterType="WorkerEvaluate">
+        inset into cinema.t_worker_evaluate
+        (id,wid,uid,content,type,createAt)
+        values
+        (#{id},#{wid},#{uid},#{content},#{type},#{createAt})
+    </insert>
+</mapper>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <properties resource="db.properties">
+        <property name="username" value="root"/>
+        <property name="password" value="123456"/>
+    </properties>
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+        <setting name="defaultExecutorType" value="BATCH"/>
+    </settings>
+
+    <typeAliases>
+        <typeAlias type="model.entity.Activity" alias="Activity"/>
+        <typeAlias type="model.entity.Admin" alias="Admin" />
+        <typeAlias type="model.entity.Arrangement" alias="Arrangement" />
+        <typeAlias type="model.entity.Cart" alias="Cart" />
+        <typeAlias type="model.entity.DailyWork" alias="" />
+        <typeAlias type="model.entity.Film" alias="Film" />
+        <typeAlias type="model.entity.FilmEvaluate" alias="FilmEvaluate" />
+        <typeAlias type="model.entity.LeavingMessage" alias="LeavingMessage" />
+        <typeAlias type="model.entity.Order" alias="Order" />
+        <typeAlias type="model.entity.OrderException" alias="OrderException" />
+        <typeAlias type="model.entity.Poster" alias="Poster" />
+        <typeAlias type="model.entity.Registration" alias="Registration" />
+        <typeAlias type="model.entity.Role" alias="Role" />
+        <typeAlias type="model.entity.Upload" alias="Upload" />
+        <typeAlias type="model.entity.User" alias="User" />
+        <typeAlias type="model.entity.Worker" alias="Worker" />
+        <typeAlias type="model.entity.WorkerEvaluate" alias="WorkerEvaluate" />
+    </typeAliases>
+    <environments default="test">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/cinema?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=GMT&amp;allowPublicKeyRetrieval=true"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+
+        <environment id="test">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+
+    </environments>
+    <mappers>
+<!--        <mapper resource="com/cai/dao/UserDao.xml"/>-->
+
+<!--        要求接口要与xml文件同名且在同一路径-->
+<!--        <mapper class="com.cai.dao.UserDao"></mapper>-->
+
+        <mapper resource="mapper/ActivityMapper.xml"></mapper>
+        <mapper resource="mapper/AdminMapper.xml"></mapper>
+        <mapper resource="mapper/ArrangementMapper.xml"></mapper>
+        <mapper resource="mapper/CartMapper.xml"></mapper>
+        <mapper resource="mapper/DailyWorkMapper.xml"></mapper>
+        <mapper resource="mapper/FilmEvaluateMapper.xml"></mapper>
+        <mapper resource="mapper/FilmMapper.xml"></mapper>
+        <mapper resource="mapper/LeavingMessageMapper.xml"></mapper>
+        <mapper resource="mapper/OrderExceptionMapper.xml"></mapper>
+        <mapper resource="mapper/OrderMapper.xml"></mapper>
+        <mapper resource="mapper/PosterMapper.xml"></mapper>
+        <mapper resource="mapper/RegistrationMapper.xml"></mapper>
+        <mapper resource="mapper/RoleMapper.xml"></mapper>
+        <mapper resource="mapper/UploadMapper.xml"></mapper>
+        <mapper resource="mapper/UserMapper.xml"></mapper>
+        <mapper resource="mapper/WorkerEvaluateMapper.xml"></mapper>
+        <mapper resource="mapper/WorkerMapper.xml"></mapper>
+
+    </mappers>
+</configuration>

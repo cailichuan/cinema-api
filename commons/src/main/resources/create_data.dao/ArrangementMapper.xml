@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="create_data.dao.ArrangementMapper">
+
+    <insert id="insert" parameterType="Arrangement">
+        inset into cinema.Arrangement
+        (id,fid,name,seatNumber,price,type,date,startTime,boxOffice,endTime,founder,creaTeAt)
+        values
+        (#{id},#{fid},#{name},#{seatNumber},#{price},#{type},#{date},#{startTime},#{boxOffice},#{endTime},#{founder},#{createAt})
+    </insert>
+
+</mapper>
