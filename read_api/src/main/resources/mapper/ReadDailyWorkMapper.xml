@@ -4,10 +4,9 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cinema.read_api.mapper.ReadDailyWorkMapper">
 
-    <insert id="insert" parameterType="DailyWork">
-        inset into cinema.t_daily_work
-        (id,type,content,createAt)
-        values
-        (#{id},#{type},#{content},#{createAt})
-    </insert>
+
+    <select id="selectList" resultType="DailyWork">
+        select *
+        from cinema.t_daily_work
+    </select>
 </mapper>

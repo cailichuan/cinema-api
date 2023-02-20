@@ -4,10 +4,9 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cinema.read_api.mapper.ReadCartMapper">
 
-    <insert id="insert" parameterType="Cart">
-        inset into cinema.cart
-        (id,uid,aid,seats,phone,status,price)
-        values
-        (#{id},#{uid},#{aid},#{seats},#{phone},#{status},#{price})
-    </insert>
+    <select id="selectListByUid" parameterType="Integer" resultType="Cart">
+        select *
+        from cinema.t_cart
+        where uid = #{uid}
+    </select>
 </mapper>

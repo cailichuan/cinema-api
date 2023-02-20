@@ -1,6 +1,7 @@
 package com.cinema.main_api.service.impl;
 
 
+import api.read.ReadApi;
 import com.cinema.main_api.service.DailyWorkService;
 import model.entity.DailyWork;
 import org.springframework.stereotype.Service;
@@ -13,6 +14,9 @@ import java.util.UUID;
 @Service
 public class DailyWorkServiceImpl implements DailyWorkService {
 
+    @Resource
+    private ReadApi readApi;
+
     public DailyWorkServiceImpl() {
         super();
     }
@@ -24,7 +28,7 @@ public class DailyWorkServiceImpl implements DailyWorkService {
 
     @Override
     public List<DailyWork> findAll() {
-        return null;
+        return readApi.findAllDailyWork();
     }
 
     @Override

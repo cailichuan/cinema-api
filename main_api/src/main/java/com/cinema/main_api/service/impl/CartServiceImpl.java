@@ -1,6 +1,7 @@
 package com.cinema.main_api.service.impl;
 
 
+import api.read.ReadApi;
 import com.cinema.main_api.service.CartService;
 import model.entity.Cart;
 import model.vo.CartVo;
@@ -17,6 +18,8 @@ import java.util.List;
 @CacheConfig(cacheNames = "cart")
 public class CartServiceImpl implements CartService {
 
+    @Resource
+    private ReadApi readApi;
 
     public CartServiceImpl() {
         super();
@@ -34,7 +37,7 @@ public class CartServiceImpl implements CartService {
 
     @Override
     public List<CartVo> findAllByUserId(Integer id) {
-        return null;
+        return readApi.findAllCartVoByUid(id);
     }
 
     @Override

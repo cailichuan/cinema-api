@@ -2,13 +2,16 @@ package api.read;
 
 import model.entity.Activity;
 import model.entity.Arrangement;
+import model.entity.DailyWork;
 import model.support.ResponseResult;
 import model.vo.ArrangementVo;
+import model.vo.CartVo;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 import java.util.Map;
@@ -51,4 +54,14 @@ public interface ReadApi {
     public ArrangementVo findArrangemenByFilmId(@PathVariable(value = "fid") Integer fid);
 
 
+    //=================================Cart=====================================
+    @GetMapping("/readapi/cart")
+    public List<CartVo> findAllCartVoByUid(@RequestParam(name ="uid") Integer uid);
+
+
+    //=================================DailyWork===================================
+    @GetMapping("/readapi/daily")
+    public List<DailyWork> findAllDailyWork();
+
+    //================================
 }
