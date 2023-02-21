@@ -5,16 +5,11 @@ import model.entity.Order;
 import model.vo.OrderVo;
 
 import java.util.List;
+import java.util.Map;
 
 public interface ReadOrderService {
 
-    Order create(Cart cart);
 
-    Order pay(Integer id);
 
-    void update(Order order);
-
-    List<OrderVo> findAll();
-
-    List<OrderVo> findByUser(Integer uid);
+    List<OrderVo> findOrderVoList(Integer Uid);
 }

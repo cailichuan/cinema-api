@@ -10,4 +10,19 @@
         where aid = #{aid}
 
     </select>
+
+    <select id="selectListByMap" parameterType="Map" resultType="Order">
+        select *
+        from cinema.t_order
+        <where>
+            <choose>
+                <when test="aid!=null">
+                    aid = #{aid}
+                </when>
+                <when test="uid!=null">
+                    uid = #{uid}
+                </when>
+            </choose>
+        </where>
+    </select>
 </mapper>

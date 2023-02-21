@@ -1,6 +1,7 @@
 package com.cinema.main_api.service.impl;
 
 
+import api.read.ReadApi;
 import com.cinema.main_api.service.OrderService;
 import model.entity.Cart;
 import model.entity.Order;
@@ -18,10 +19,8 @@ import java.util.UUID;
 @CacheConfig(cacheNames = "order")
 public class OrderServiceImpl implements OrderService {
 
-
-    public OrderServiceImpl() {
-        super();
-    }
+    @Resource
+    private ReadApi readApi;
 
     @Override
     public Order create(Cart cart) {
@@ -40,11 +39,11 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public List<OrderVo> findAll() {
-        return null;
+        return readApi.findAllOrderVo();
     }
 
     @Override
     public List<OrderVo> findByUser(Integer uid) {
-        return null;
+        return readApi.findOrderVoByUserId(uid);
     }
 }

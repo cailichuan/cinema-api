@@ -1,6 +1,7 @@
 package com.cinema.main_api.service.impl;
 
 
+import api.read.ReadApi;
 import com.cinema.main_api.service.OrderExceptionService;
 import model.entity.OrderException;
 import org.springframework.stereotype.Service;
@@ -13,9 +14,8 @@ import java.util.UUID;
 @Service
 public class OrderExceptionServiceImpl implements OrderExceptionService {
 
-    public OrderExceptionServiceImpl() {
-        super();
-    }
+    @Resource
+    private ReadApi readApi;
 
     @Override
     public OrderException create(OrderException orderException) {
@@ -24,7 +24,7 @@ public class OrderExceptionServiceImpl implements OrderExceptionService {
 
     @Override
     public List<OrderException> findAll() {
-        return null;
+        return readApi.findAllOrderException();
     }
 
     @Override

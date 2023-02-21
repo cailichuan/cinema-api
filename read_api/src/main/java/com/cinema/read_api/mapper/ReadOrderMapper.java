@@ -5,11 +5,14 @@ import model.entity.Order;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface ReadOrderMapper {
 
-    List<Order> selectList();
 
-    List<Order> selectListByAid(Integer aid);
+
+    List<Order> selectListByMap(Map map);
+
+
 }

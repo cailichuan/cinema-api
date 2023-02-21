@@ -8,9 +8,7 @@ import java.util.List;
 
 public interface ReadLeavingMessageService {
 
-    void save(LeavingMessage leavingMessage);
 
-    void reply(LeavingMessage leavingMessage);
 
     List<LeavingMessageVo> findAll();
 

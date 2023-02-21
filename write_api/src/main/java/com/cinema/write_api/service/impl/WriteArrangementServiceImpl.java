@@ -4,10 +4,11 @@ import com.cinema.write_api.mapper.WriteArrangementMapper;
 import com.cinema.write_api.service.WriteArrangementService;
 import com.cinema.write_api.util.GetSnowId;
 import model.entity.Arrangement;
+import org.springframework.stereotype.Service;
 import type.SnowIdType;
 
 import javax.annotation.Resource;
-
+@Service
 public class WriteArrangementServiceImpl implements WriteArrangementService {
 
     @Resource

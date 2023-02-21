@@ -2,7 +2,13 @@ package com.cinema.read_api.mapper;
 
 
 import model.entity.LeavingMessage;
+import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
+@Mapper
 public interface ReadLeavingMessageMapper {
-    void insert(LeavingMessage leavingMessage);
+    List<LeavingMessage> selectList();
+
+    List<LeavingMessage> selectListByUid(Integer id);
 }

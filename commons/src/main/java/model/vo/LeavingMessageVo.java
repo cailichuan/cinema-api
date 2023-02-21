@@ -8,13 +8,42 @@ import model.entity.User;
 /**
  * 留言前端展示
  */
-@Data
-@AllArgsConstructor
+
 public class LeavingMessageVo {
 
-    private String id;
+    private Integer id;
 
     private LeavingMessage leavingMessage;
 
     private User user;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public LeavingMessage getLeavingMessage() {
+        return leavingMessage;
+    }
+
+    public void setLeavingMessage(LeavingMessage leavingMessage) {
+        this.leavingMessage = leavingMessage;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public LeavingMessageVo(Integer id, LeavingMessage leavingMessage, User user) {
+        this.id = id;
+        this.leavingMessage = leavingMessage;
+        this.user = user;
+    }
 }

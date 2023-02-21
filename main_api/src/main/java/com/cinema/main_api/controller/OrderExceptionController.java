@@ -1,6 +1,6 @@
-package com.cinema.read_api.controller;
+package com.cinema.main_api.controller;
 
-import com.cinema.read_api.service.ReadOrderExceptionService;
+import com.cinema.main_api.service.OrderExceptionService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import model.entity.OrderException;
@@ -13,15 +13,15 @@ import java.util.List;
 
 @RestController
 @Api(tags = "订单异常上报接口")
-@RequestMapping("/readapi/oe")
-public class ReadOrderExceptionController {
-    @Resource
-    private ReadOrderExceptionService readOrderExceptionService;
+@RequestMapping("/api/oe")
+public class OrderExceptionController {
 
+    @Resource
+    private OrderExceptionService orderExceptionService;
     @GetMapping("")
     @ApiOperation("查询所有异常订单")
     public List<OrderException> findAll() {
-        return readOrderExceptionService.findAll();
+        return orderExceptionService.findAll();
     }
 
 }

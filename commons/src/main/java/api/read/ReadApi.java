@@ -1,13 +1,8 @@
 package api.read;
 
-import model.entity.Activity;
-import model.entity.Arrangement;
-import model.entity.DailyWork;
-import model.entity.Film;
+import model.entity.*;
 import model.support.ResponseResult;
-import model.vo.ArrangementVo;
-import model.vo.CartVo;
-import model.vo.FilmEvaluateVo;
+import model.vo.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
@@ -82,5 +77,25 @@ public interface ReadApi {
     @GetMapping("/readapi/fe")
     public List<FilmEvaluateVo> findFilmEvaluateVoByFid(@RequestParam(name = "fid") Integer fid);
 
-    //===============================
+    //===============================LeavingMessage==============================
+    @GetMapping("/readapi/lm")
+    public List<LeavingMessageVo> findAllLeavingMessageVo();
+
+    @GetMapping("/readapi/lm/active")
+    public List<ActiveUserVo> findLeavingMessageActiveUsers();
+
+    //===============================Order=======================================
+    @GetMapping("/readapi/order")
+    public List<OrderVo> findAllOrderVo();
+
+    @GetMapping("/readapi/order/user/{id}")
+    public List<OrderVo> findOrderVoByUserId(@PathVariable(value = "id") Integer id);
+
+    //===============================OrderException=============================
+
+    @GetMapping("/readapi/oe")
+    public List<OrderException> findAllOrderException();
+
+    //====================
+
 }
