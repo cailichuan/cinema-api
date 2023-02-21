@@ -3,9 +3,11 @@ package api.read;
 import model.entity.Activity;
 import model.entity.Arrangement;
 import model.entity.DailyWork;
+import model.entity.Film;
 import model.support.ResponseResult;
 import model.vo.ArrangementVo;
 import model.vo.CartVo;
+import model.vo.FilmEvaluateVo;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
@@ -63,5 +65,22 @@ public interface ReadApi {
     @GetMapping("/readapi/daily")
     public List<DailyWork> findAllDailyWork();
 
-    //================================
+    //================================Film=======================================
+    @GetMapping("/readapi/film")
+    public List<Film> findAllFilm(@RequestParam(name = "region" ,required = false) String region, @RequestParam(name = "type",required = false) Integer type);
+
+    @GetMapping("/readapi/film/hot/{limit}")
+    public List<Film> findFilmHots(@PathVariable(value = "limit") Integer limit);
+
+    @GetMapping("/readapi/film/name/{name}")
+    public List<Film> searchFilmByName(@PathVariable(value = "name") String name);
+
+    @GetMapping("/readapi/film/{id}")
+    public Film findFilmById(@PathVariable(value = "id") Integer id);
+
+    //===============================FilmEvaluate================================
+    @GetMapping("/readapi/fe")
+    public List<FilmEvaluateVo> findFilmEvaluateVoByFid(@RequestParam(name = "fid") Integer fid);
+
+    //===============================
 }

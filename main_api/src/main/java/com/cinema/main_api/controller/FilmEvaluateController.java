@@ -1,6 +1,6 @@
-package com.cinema.read_api.controller;
+package com.cinema.main_api.controller;
 
-import com.cinema.read_api.service.ReadFilmEvaluateService;
+import com.cinema.main_api.service.FilmEvaluateService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import model.vo.FilmEvaluateVo;
@@ -14,17 +14,17 @@ import java.util.List;
 
 @RestController
 @Api(tags = "电影评价接口")
-@RequestMapping("/readapi/fe")
-public class ReadFilmEvaluateController {
+@RequestMapping("/api/fe")
+public class FilmEvaluateController {
 
     @Resource
-    private ReadFilmEvaluateService readFilmEvaluateService;
+    private FilmEvaluateService filmEvaluateService;
 
     @GetMapping("")
     @ApiOperation("获取电影评论")
     public List<FilmEvaluateVo> list(@RequestParam(name = "fid") Integer fid) {
         if (fid != null) {
-            return readFilmEvaluateService.findAllByFilmId(fid);
+            return filmEvaluateService.findAllByFilmId(fid);
         }
         return null;
     }

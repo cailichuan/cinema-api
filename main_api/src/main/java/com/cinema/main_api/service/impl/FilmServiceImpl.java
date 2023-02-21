@@ -1,6 +1,7 @@
 package com.cinema.main_api.service.impl;
 
 
+import api.read.ReadApi;
 import com.cinema.main_api.service.FilmService;
 import model.entity.Film;
 import org.springframework.cache.annotation.CacheConfig;
@@ -16,9 +17,9 @@ import java.util.List;
 @CacheConfig(cacheNames = "film")
 public class FilmServiceImpl implements FilmService {
 
-    public FilmServiceImpl() {
-        super();
-    }
+
+    @Resource
+    private ReadApi readApi;
 
     @Override
     public void save(Film film) {
@@ -32,27 +33,27 @@ public class FilmServiceImpl implements FilmService {
 
     @Override
     public List<Film> findAll() {
-        return null;
+        return readApi.findAllFilm(null,null);
     }
 
     @Override
-    public List<Film> findByRegionAndType(String region, String type) {
-        return null;
+    public List<Film> findByRegionAndType(String region, Integer type) {
+        return readApi.findAllFilm(region,type);
     }
 
     @Override
     public List<Film> findHots(Integer limit) {
-        return null;
+        return readApi.findFilmHots(limit);
     }
 
     @Override
     public List<Film> findLikeName(String name) {
-        return null;
+        return readApi.searchFilmByName(name);
     }
 
     @Override
     public Film findById(Integer id) {
-        return null;
+        return readApi.findFilmById(id);
     }
 
     @Override

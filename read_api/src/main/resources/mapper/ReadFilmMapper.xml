@@ -9,4 +9,35 @@
         from cinema.t_film
         where id = #{id}
     </select>
+
+    <select id="selectListByMap" parameterType="Map" resultType="Film">
+        select *
+        from cinema.t_film
+        <where>
+            <choose>
+                <when test="region!=null and type!=null ">
+                    region = #{region} and type = #{type}
+                </when>
+
+                <when test="region!=null">
+                    region = #{region}
+                </when>
+
+                <when test="type !=null">
+                    type = #{type}
+                </when>
+
+                <when test="name!=null">
+                    name like "%" #{name} "%"
+                </when>
+
+            </choose>
+
+        </where>
+
+        <if test="limit!=null">
+            order by hot desc
+            limit #{limit}
+        </if>
+    </select>
 </mapper>

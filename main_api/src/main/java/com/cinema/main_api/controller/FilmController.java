@@ -21,8 +21,8 @@ public class FilmController {
 
     @GetMapping("")
     @ApiOperation("列出所有电影")
-    public List<Film> list(@RequestParam(name = "region") String region,@RequestParam(name = "type") String type){
-        if (region != null && type != null) {
+    public List<Film> list(@RequestParam(name = "region",required = false) String region,@RequestParam(name = "type",required = false) Integer type){
+        if (region != null && !region.equals("全部") && !region.equals("") || type != null) {
             return  filmService.findByRegionAndType(region,type);
         }
 

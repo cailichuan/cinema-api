@@ -12,7 +12,7 @@ public interface FilmService {
 
     List<Film> findAll();
 
-    List<Film> findByRegionAndType(String region,String type);
+    List<Film> findByRegionAndType(String region,Integer type);
 
     //获取热门电影
     List<Film> findHots(Integer limit);

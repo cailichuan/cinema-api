@@ -13,25 +13,28 @@
     </loaded-modules>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cd14c44-87e1-4363-9b1f-d513898514f5" name="变更" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/main_api/src/main/java/com/cinema/main_api/controller/CartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_api/src/main/java/com/cinema/main_api/controller/DailyWorkController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_api/src/main/java/com/cinema/main_api/controller/FilmController.java" afterDir="false" />
+    <list default="true" id="0cd14c44-87e1-4363-9b1f-d513898514f5" name="变更" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <change afterPath="$PROJECT_DIR$/main_api/src/main/java/com/cinema/main_api/controller/FilmEvaluateController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commons/src/main/java/api/read/ReadApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/commons/src/main/java/api/read/ReadApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/src/main/java/model/vo/CartVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/commons/src/main/java/model/vo/CartVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_api/src/main/java/com/cinema/main_api/service/impl/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/main_api/src/main/java/com/cinema/main_api/service/impl/CartServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_api/src/main/java/com/cinema/main_api/service/impl/DailyWorkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/main_api/src/main/java/com/cinema/main_api/service/impl/DailyWorkServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/controller/ReadCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/controller/ReadCartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/controller/ReadDailyWorkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/controller/ReadDailyWorkController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/mapper/ReadCartMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/mapper/ReadCartMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/mapper/ReadDailyWorkMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/mapper/ReadDailyWorkMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/service/ReadCartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/service/ReadCartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/service/ReadDailyWorkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/service/ReadDailyWorkService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/service/impl/ReadCartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/service/impl/ReadCartServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/service/impl/ReadDailyWorkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/service/impl/ReadDailyWorkServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/read_api/src/main/resources/mapper/ReadCartMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/read_api/src/main/resources/mapper/ReadCartMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/read_api/src/main/resources/mapper/ReadDailyWorkMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/read_api/src/main/resources/mapper/ReadDailyWorkMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commons/src/main/java/model/entity/FilmEvaluate.java" beforeDir="false" afterPath="$PROJECT_DIR$/commons/src/main/java/model/entity/FilmEvaluate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commons/src/main/java/model/vo/FilmEvaluateVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/commons/src/main/java/model/vo/FilmEvaluateVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_api/src/main/java/com/cinema/main_api/controller/FilmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/main_api/src/main/java/com/cinema/main_api/controller/FilmController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_api/src/main/java/com/cinema/main_api/service/FilmService.java" beforeDir="false" afterPath="$PROJECT_DIR$/main_api/src/main/java/com/cinema/main_api/service/FilmService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_api/src/main/java/com/cinema/main_api/service/impl/FilmEvaluateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/main_api/src/main/java/com/cinema/main_api/service/impl/FilmEvaluateServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_api/src/main/java/com/cinema/main_api/service/impl/FilmServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/main_api/src/main/java/com/cinema/main_api/service/impl/FilmServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/controller/ReadFilmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/controller/ReadFilmController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/controller/ReadFilmEvaluateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/controller/ReadFilmEvaluateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/mapper/ReadFilmEvaluateMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/mapper/ReadFilmEvaluateMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/mapper/ReadFilmMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/mapper/ReadFilmMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/mapper/ReadUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/mapper/ReadUserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/service/ReadFilmEvaluateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/service/ReadFilmEvaluateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/service/ReadFilmService.java" beforeDir="false" afterPath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/service/ReadFilmService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/service/impl/ReadFilmEvaluateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/service/impl/ReadFilmEvaluateServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/service/impl/ReadFilmServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/read_api/src/main/java/com/cinema/read_api/service/impl/ReadFilmServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read_api/src/main/resources/mapper/ReadFilmEvaluateMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/read_api/src/main/resources/mapper/ReadFilmEvaluateMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read_api/src/main/resources/mapper/ReadFilmMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/read_api/src/main/resources/mapper/ReadFilmMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read_api/src/main/resources/mapper/ReadUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/read_api/src/main/resources/mapper/ReadUserMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,9 +292,10 @@
       <workItem from="1676812466141" duration="1742000" />
       <workItem from="1676860659606" duration="9728000" />
       <workItem from="1676903560220" duration="1887000" />
-      <workItem from="1676905721616" duration="1712000" />
-      <workItem from="1676907540032" duration="160000" />
-      <workItem from="1676945644608" duration="7918000" />
+      <workItem from="1676905721616" duration="1087000" />
+      <workItem from="1676958709742" duration="18253000" />
+      <workItem from="1676996461451" duration="550000" />
+      <workItem from="1676997026916" duration="517000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1676124508211</created>
@@ -461,21 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676906738762</updated>
     </task>
-    <task id="LOCAL-00025" summary="Initial commit">
-      <created>1676906852797</created>
+    <task id="LOCAL-00025" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <created>1676958092741</created>
       <option name="number" value="00025" />
       <option name="presentableId" value="LOCAL-00025" />
       <option name="project" value="LOCAL" />
-      <updated>1676906852797</updated>
+      <updated>1676958092741</updated>
     </task>
-    <task id="LOCAL-00026" summary="Initial commit">
-      <created>1676907689653</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1676907689653</updated>
-    </task>
-    <option name="localTasksCounter" value="27" />
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,7 +492,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

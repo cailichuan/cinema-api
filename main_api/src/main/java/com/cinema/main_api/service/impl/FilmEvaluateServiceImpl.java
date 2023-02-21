@@ -1,6 +1,7 @@
 package com.cinema.main_api.service.impl;
 
 
+import api.read.ReadApi;
 import com.cinema.main_api.service.FilmEvaluateService;
 import model.entity.FilmEvaluate;
 import model.vo.FilmEvaluateVo;
@@ -16,9 +17,9 @@ import java.util.List;
 @CacheConfig(cacheNames = "filmEvaluate")
 public class FilmEvaluateServiceImpl implements FilmEvaluateService {
 
-    public FilmEvaluateServiceImpl() {
-        super();
-    }
+    @Resource
+    private ReadApi readApi;
+
 
     @Override
     public void save(FilmEvaluate filmEvaluate) throws Exception {
@@ -27,7 +28,7 @@ public class FilmEvaluateServiceImpl implements FilmEvaluateService {
 
     @Override
     public List<FilmEvaluateVo> findAllByFilmId(Integer fid) {
-        return null;
+        return readApi.findFilmEvaluateVoByFid(fid);
     }
 
     @Override

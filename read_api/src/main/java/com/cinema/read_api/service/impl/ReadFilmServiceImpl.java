@@ -6,7 +6,9 @@ import model.entity.Film;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class ReadFilmServiceImpl implements ReadFilmService {
@@ -14,24 +16,11 @@ public class ReadFilmServiceImpl implements ReadFilmService {
     @Resource
     private ReadFilmMapper readFilmMapper;
 
-    @Override
-    public List<Film> findAll() {
-        return null;
-    }
+
 
     @Override
-    public List<Film> findByRegionAndType(String region, String type) {
-        return null;
-    }
-
-    @Override
-    public List<Film> findHots(Integer limit) {
-        return null;
-    }
-
-    @Override
-    public List<Film> findLikeName(String name) {
-        return null;
+    public List<Film> findByMap(Map map) {
+        return readFilmMapper.selectListByMap(map);
     }
 
     @Override

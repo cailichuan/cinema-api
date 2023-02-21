@@ -8,8 +8,7 @@ import org.springframework.format.annotation.DateTimeFormat;
  * 电影评价
  */
 
-@Data
-@NoArgsConstructor
+
 public class FilmEvaluate {
 
     private Integer id;

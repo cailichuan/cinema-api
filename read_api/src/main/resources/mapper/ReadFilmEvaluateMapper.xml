@@ -4,10 +4,9 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cinema.read_api.mapper.ReadFilmEvaluateMapper">
 
-    <insert id="insert" parameterType="FilmEvaluate">
-        inset into cinema.t_film_evaluate
-        (id,fid,uid,star,comment,createAt)
-        values
-        (#{id},#{fid},#{uid},#{star},#{comment},#{createAt})
-    </insert>
+    <select id="selectListByFid" parameterType="Integer" resultType="FilmEvaluate">
+        select *
+        from cinema.t_film_evaluate
+        where fid = #{fid}
+    </select>
 </mapper>
