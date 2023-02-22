@@ -1,12 +1,12 @@
 package com.cinema.read_api.service;
 
+import model.entity.Upload;
 import org.springframework.web.multipart.MultipartFile;
 
 public interface ReadUploadService {
 
 
-    //检验文件并且保存 返回值为Upload字段的id
-    String checkAndSaveUpload(MultipartFile file);
+    String getFileNameById(Long id);
 
-    void deleteById(Integer id);
+
 }

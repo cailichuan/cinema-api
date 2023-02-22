@@ -10,7 +10,7 @@ import java.util.List;
 public interface ReadArrangementMapper {
     List<Arrangement> selectList();
 
-    List<Arrangement> selectListByFid(Integer fid);
+    List<Arrangement> selectListByFid(Long fid);
 
-    Arrangement selectById(Integer id);
+    Arrangement selectById(Long id);
 }

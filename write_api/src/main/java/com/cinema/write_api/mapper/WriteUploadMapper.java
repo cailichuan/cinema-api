@@ -8,4 +8,6 @@ import org.apache.ibatis.annotations.Mapper;
 public interface WriteUploadMapper {
 
     void insert(Upload upload);
+
+
 }

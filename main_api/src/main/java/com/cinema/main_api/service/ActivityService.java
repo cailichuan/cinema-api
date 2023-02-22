@@ -8,9 +8,9 @@ public interface ActivityService {
 
     void create(Activity activity);
 
-    Activity finfById(Integer id);
+    Activity finfById(Long id);
 
     List<Activity> findAll();
 
-    void deleteById(Integer id);
+    void deleteById(Long id);
 }

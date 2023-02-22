@@ -31,12 +31,12 @@ public class CartServiceImpl implements CartService {
     }
 
     @Override
-    public void deleteAllByUserId(Integer uid) {
+    public void deleteAllByUserId(Long uid) {
 
     }
 
     @Override
-    public List<CartVo> findAllByUserId(Integer id) {
+    public List<CartVo> findAllByUserId(Long id) {
         return readApi.findAllCartVoByUid(id);
     }
 

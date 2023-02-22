@@ -11,13 +11,13 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 public class FilmEvaluate {
 
-    private Integer id;
+    private Long id;
 
     //电影id
-    private Integer fid;
+    private Long fid;
 
     //用户id
-    private Integer uid;
+    private Long uid;
 
     //星级
     private Integer star;
@@ -27,27 +27,27 @@ public class FilmEvaluate {
 
     private String createAt;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public Integer getFid() {
+    public Long getFid() {
         return fid;
     }
 
-    public void setFid(Integer fid) {
+    public void setFid(Long fid) {
         this.fid = fid;
     }
 
-    public Integer getUid() {
+    public Long getUid() {
         return uid;
     }
 
-    public void setUid(Integer uid) {
+    public void setUid(Long uid) {
         this.uid = uid;
     }
 

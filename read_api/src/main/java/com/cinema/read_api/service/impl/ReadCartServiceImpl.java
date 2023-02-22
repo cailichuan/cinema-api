@@ -26,7 +26,7 @@ public class ReadCartServiceImpl implements ReadCartService {
     @Resource
     private ReadFilmMapper readFilmMapper;
     @Override
-    public List<CartVo> findAllByUserId(Integer uid) {
+    public List<CartVo> findAllByUserId(Long uid) {
         List<CartVo> result = new ArrayList<>();
         List<Cart> carts = readCartMapper.selectListByUid(uid);
         for (Cart cart : carts) {

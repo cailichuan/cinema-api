@@ -11,17 +11,17 @@ import model.entity.User;
 
 public class FilmEvaluateVo {
 
-    private Integer id;
+    private Long id;
 
     private FilmEvaluate filmEvaluate;
 
     private User user;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -42,7 +42,7 @@ public class FilmEvaluateVo {
     }
 
 
-    public FilmEvaluateVo(Integer id, FilmEvaluate filmEvaluate, User user) {
+    public FilmEvaluateVo(Long id, FilmEvaluate filmEvaluate, User user) {
         this.id = id;
         this.filmEvaluate = filmEvaluate;
         this.user = user;

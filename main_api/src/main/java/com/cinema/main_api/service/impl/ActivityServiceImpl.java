@@ -30,7 +30,7 @@ public class ActivityServiceImpl implements ActivityService {
     }
 
     @Override
-    public Activity finfById(Integer id) {
+    public Activity finfById(Long id) {
 
        return readApi.findActivityById(id);
 
@@ -44,7 +44,7 @@ public class ActivityServiceImpl implements ActivityService {
     }
 
     @Override
-    public void deleteById(Integer id) {
+    public void deleteById(Long id) {
 
     }
 }

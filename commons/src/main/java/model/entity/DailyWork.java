@@ -8,7 +8,7 @@ import lombok.Data;
 
 public class DailyWork {
 
-    private Integer id;
+    private Long id;
 
     //重要 一般 非常重要
     private Integer type;
@@ -19,11 +19,11 @@ public class DailyWork {
     //上传时间
     private  String creatAt;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -27,17 +27,17 @@ public class FilmEvaluateServiceImpl implements FilmEvaluateService {
     }
 
     @Override
-    public List<FilmEvaluateVo> findAllByFilmId(Integer fid) {
+    public List<FilmEvaluateVo> findAllByFilmId(Long fid) {
         return readApi.findFilmEvaluateVoByFid(fid);
     }
 
     @Override
-    public void deleteAllByFilmId(Integer fid) {
+    public void deleteAllByFilmId(Long fid) {
 
     }
 
     @Override
-    public void deleteById(Integer id) {
+    public void deleteById(Long id) {
 
     }
 }

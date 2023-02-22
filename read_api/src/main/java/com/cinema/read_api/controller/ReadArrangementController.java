@@ -36,7 +36,7 @@ public class ReadArrangementController {
 
     @GetMapping("/{id}")
     @ApiOperation("查询排片")
-    public Map<String,Object> findById(@PathVariable(value = "id")Integer id){
+    public Map<String,Object> findById(@PathVariable(value = "id")Long id){
         Map<String,Object> map = new HashMap<>();
         Arrangement arrangement = readArrangementService.findById(id);
         map.put("film",readFilmService.findById(arrangement.getFid()));
@@ -46,13 +46,13 @@ public class ReadArrangementController {
 
     @GetMapping("/{id}/getSeats")
     @ApiOperation("获取座位情况")
-    public List<Integer> getSeats(@PathVariable(value = "id") Integer id){
+    public List<Integer> getSeats(@PathVariable(value = "id") Long id){
         return readArrangementService.getSeatSeatsHaveSelected(id);
     }
 
     @GetMapping("/film/{fid}")
     @ApiOperation("查询某个电影的所有排片")
-    public ArrangementVo findByFilmId(@PathVariable(value = "fid") Integer fid){
+    public ArrangementVo findByFilmId(@PathVariable(value = "fid") Long fid){
         return readArrangementService.findByFilmId(fid);
     }
 

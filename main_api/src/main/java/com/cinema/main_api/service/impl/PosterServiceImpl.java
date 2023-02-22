@@ -1,6 +1,7 @@
 package com.cinema.main_api.service.impl;
 
 
+import api.read.ReadApi;
 import com.cinema.main_api.service.PosterService;
 import model.entity.Poster;
 import org.springframework.stereotype.Service;
@@ -13,10 +14,8 @@ import java.util.UUID;
 @Service
 public class PosterServiceImpl implements PosterService {
 
-    public PosterServiceImpl() {
-        super();
-    }
-
+    @Resource
+    private ReadApi readApi;
     @Override
     public void save(Poster poster) {
 
@@ -27,14 +26,10 @@ public class PosterServiceImpl implements PosterService {
 
     }
 
-    @Override
-    public List<Poster> findAll() {
-        return null;
-    }
 
     @Override
-    public List<Poster> findByStatus(boolean status) {
-        return null;
+    public List<Poster> findByMap(Boolean status) {
+        return readApi.findPosterByMap(status);
     }
 
     @Override

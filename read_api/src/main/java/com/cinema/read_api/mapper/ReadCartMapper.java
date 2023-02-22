@@ -9,5 +9,5 @@ import java.util.List;
 
 @Mapper
 public interface ReadCartMapper {
-    List<Cart> selectListByUid(Integer uid);
+    List<Cart> selectListByUid(Long uid);
 }

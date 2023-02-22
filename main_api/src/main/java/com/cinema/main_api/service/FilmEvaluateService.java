@@ -9,9 +9,9 @@ public interface FilmEvaluateService {
     public void save(FilmEvaluate filmEvaluate) throws Exception;
 
 
-    public List<FilmEvaluateVo> findAllByFilmId(Integer fid);
+    public List<FilmEvaluateVo> findAllByFilmId(Long fid);
 
 
-    public void deleteAllByFilmId(Integer fid);
-    public void deleteById(Integer id);
+    public void deleteAllByFilmId(Long fid);
+    public void deleteById(Long id);
 }

@@ -10,35 +10,46 @@ import lombok.NoArgsConstructor;
 
 public class Upload {
 
-    private Integer id;
+    private Long id;
 
-    private byte[] bytes;
+    //文件的路径
+    private String path;
 
-    //文件的md5值
-    private String md5;
+    //文件的后缀名
+    private String suffix;
 
-
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public byte[] getBytes() {
-        return bytes;
+    public String getPath() {
+        return path;
     }
 
-    public void setBytes(byte[] bytes) {
-        this.bytes = bytes;
+    public void setPath(String path) {
+        this.path = path;
     }
 
-    public String getMd5() {
-        return md5;
+    public String getSuffix() {
+        return suffix;
     }
 
-    public void setMd5(String md5) {
-        this.md5 = md5;
+    public void setSuffix(String suffix) {
+        this.suffix = suffix;
+    }
+
+
+    public Upload(Long id, String path, String suffix) {
+        this.id = id;
+        this.path = path;
+        this.suffix = suffix;
+    }
+
+    public String getFileName(String path){
+        return path+"/"+this.path+"/"+this.id+"."+this.suffix;
     }
 }

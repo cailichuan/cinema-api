@@ -10,5 +10,5 @@ public interface WriteActivityService {
 
 
 
-    void deleteById(Integer id);
+    void deleteById(Long id);
 }

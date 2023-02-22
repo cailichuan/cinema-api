@@ -12,7 +12,7 @@
 
 
 
-    <select id="selectById" parameterType="Integer" resultType="Activity">
+    <select id="selectById" parameterType="Long" resultType="Activity">
         select *
         from cinema.t_activity
         where id = #{id}

@@ -2,6 +2,7 @@ package com.cinema.write_api.handler;
 
 import annotation.DisableBaseResponse;
 import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
 import model.support.ResponseResult;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -14,7 +15,7 @@ import java.nio.file.AccessDeniedException;
  * 返回Respone写入ApiResult
  */
 
-@Log4j
+@Slf4j
 @RestControllerAdvice
 public class WriteGlobalExceptionHandler {
 

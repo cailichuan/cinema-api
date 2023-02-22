@@ -28,7 +28,7 @@ public class ReadOrderController {
 
     @GetMapping("/user/{id}")
     @ApiOperation(value = "查询用户订单")
-    public List<OrderVo> findByUserId(@PathVariable(value = "id") Integer id) {
+    public List<OrderVo> findByUserId(@PathVariable(value = "id") Long id) {
         return readOrderService.findOrderVoList(id);
     }
 

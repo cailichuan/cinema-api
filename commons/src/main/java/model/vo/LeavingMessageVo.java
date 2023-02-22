@@ -11,17 +11,17 @@ import model.entity.User;
 
 public class LeavingMessageVo {
 
-    private Integer id;
+    private Long id;
 
     private LeavingMessage leavingMessage;
 
     private User user;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -41,7 +41,7 @@ public class LeavingMessageVo {
         this.user = user;
     }
 
-    public LeavingMessageVo(Integer id, LeavingMessage leavingMessage, User user) {
+    public LeavingMessageVo(Long id, LeavingMessage leavingMessage, User user) {
         this.id = id;
         this.leavingMessage = leavingMessage;
         this.user = user;

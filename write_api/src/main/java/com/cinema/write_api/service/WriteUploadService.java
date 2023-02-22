@@ -6,7 +6,7 @@ public interface WriteUploadService {
 
 
     //检验文件并且保存 返回值为Upload字段的id
-    String checkAndSaveUpload(MultipartFile file);
+    Long checkAndSaveUpload(MultipartFile file,String path);
 
     void deleteById(Integer id);
 }

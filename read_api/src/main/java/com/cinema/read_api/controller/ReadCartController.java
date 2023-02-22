@@ -22,7 +22,7 @@ public class ReadCartController {
 
     @GetMapping("")
     @ApiOperation("根据用户id查询购物车")
-    public List<CartVo> list(@RequestParam(name = "uid") Integer uid){
+    public List<CartVo> list(@RequestParam(name = "uid") Long uid){
 
         return readCartService.findAllByUserId(uid);
 

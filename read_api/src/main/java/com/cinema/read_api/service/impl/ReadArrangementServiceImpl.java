@@ -34,16 +34,16 @@ public class ReadArrangementServiceImpl implements ReadArrangementService {
     }
 
     @Override
-    public ArrangementVo findByFilmId(Integer fid) {
+    public ArrangementVo findByFilmId(Long fid) {
         List<Arrangement> arrangements = readArrangementMapper.selectListByFid(fid);
 
         return new ArrangementVo(arrangements,readFilmMapper.selectById(fid));
     }
 
     @Override
-    public List<Integer> getSeatSeatsHaveSelected(Integer id) {
+    public List<Integer> getSeatSeatsHaveSelected(Long id) {
         //通过场次id获得已经购买或正在购买座位号信息
-        Map<String, Integer> map = new HashMap<>();
+        Map<String, Long> map = new HashMap<>();
         map.put("aid",id);
         List<Order> orders = readOrderMapper.selectListByMap(map);
         List<Integer> seats = new ArrayList<>();
@@ -59,7 +59,7 @@ public class ReadArrangementServiceImpl implements ReadArrangementService {
     }
 
     @Override
-    public Arrangement findById(Integer id) {
+    public Arrangement findById(Long id) {
         return readArrangementMapper.selectById(id);
     }
 }

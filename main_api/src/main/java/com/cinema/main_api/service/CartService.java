@@ -9,9 +9,9 @@ public interface CartService {
 
     void save(Cart cart);
 
-    void deleteAllByUserId(Integer uid);
+    void deleteAllByUserId(Long uid);
 
-    List<CartVo> findAllByUserId(Integer id);
+    List<CartVo> findAllByUserId(Long id);
 
     //删除用户选中的购物车
     void  deleteCarts(List<Cart> carts);

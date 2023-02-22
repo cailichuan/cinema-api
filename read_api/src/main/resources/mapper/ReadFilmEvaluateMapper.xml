@@ -4,7 +4,7 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cinema.read_api.mapper.ReadFilmEvaluateMapper">
 
-    <select id="selectListByFid" parameterType="Integer" resultType="FilmEvaluate">
+    <select id="selectListByFid" parameterType="Long" resultType="FilmEvaluate">
         select *
         from cinema.t_film_evaluate
         where fid = #{fid}

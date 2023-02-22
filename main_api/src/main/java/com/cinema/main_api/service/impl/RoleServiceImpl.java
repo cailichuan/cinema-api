@@ -1,6 +1,7 @@
 package com.cinema.main_api.service.impl;
 
 
+import api.read.ReadApi;
 import com.cinema.main_api.service.RoleService;
 import model.entity.Role;
 import org.springframework.cache.annotation.CacheConfig;
@@ -15,9 +16,8 @@ import java.util.UUID;
 @CacheConfig(cacheNames = "role")
 public class RoleServiceImpl implements RoleService {
 
-    public RoleServiceImpl() {
-        super();
-    }
+    @Resource
+    private ReadApi readApi;
 
     @Override
     public Role create(Role role) throws Exception {
@@ -25,17 +25,17 @@ public class RoleServiceImpl implements RoleService {
     }
 
     @Override
-    public void deleteById(Integer id) throws Exception {
+    public void deleteById(Long id) throws Exception {
 
     }
 
     @Override
-    public List<Role> listRolesByWorkerId(Integer wid) {
-        return null;
+    public List<Role> listRolesByWorkerId(Long wid) {
+        return readApi.findRoleByWid(wid);
     }
 
     @Override
-    public void deleteWorkerAllRoles(Integer wid) {
+    public void deleteWorkerAllRoles(Long wid) {
 
     }
 }

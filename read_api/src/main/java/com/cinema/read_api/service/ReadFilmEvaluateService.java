@@ -9,7 +9,7 @@ public interface ReadFilmEvaluateService {
 
 
 
-    public List<FilmEvaluateVo> findAllByFilmId(Integer fid);
+    public List<FilmEvaluateVo> findAllByFilmId(Long fid);
 
 
 

@@ -25,7 +25,7 @@ public class ReadActivityController {
 
     @GetMapping("{id}")
     @ApiOperation("根据id查找活动")
-    public Activity findById(@PathVariable("id") Integer id){
+    public Activity findById(@PathVariable("id") Long id){
         return readActivityService.finfById(id);
     }
 }

@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 
 public class Worker {
 
-    private Integer id;
+    private Long id;
 
     private String username;
 
@@ -35,11 +35,11 @@ public class Worker {
     private String updateAt;
 
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

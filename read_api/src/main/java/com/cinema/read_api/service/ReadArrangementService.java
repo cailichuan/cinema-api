@@ -11,11 +11,11 @@ public interface ReadArrangementService {
 
     List<Arrangement> findAll();
 
-    ArrangementVo findByFilmId(Integer fid);
+    ArrangementVo findByFilmId(Long fid);
 
-    List<Integer> getSeatSeatsHaveSelected(Integer id);
+    List<Integer> getSeatSeatsHaveSelected(Long id);
 
-    Arrangement findById(Integer id);
+    Arrangement findById(Long id);
 
 
 }

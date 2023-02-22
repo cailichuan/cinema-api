@@ -5,11 +5,9 @@ import model.entity.Role;
 import java.util.List;
 
 public interface ReadRoleService {
-    Role create(Role role) throws Exception;
 
-    void deleteById(Integer id) throws Exception;
 
-    List<Role> listRolesByWorkerId(Integer wid);
+    List<Role> listRolesByWorkerId(Long wid);
 
-    void deleteWorkerAllRoles(Integer wid);
+
 }

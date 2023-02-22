@@ -10,16 +10,16 @@ import lombok.NoArgsConstructor;
 
 public class Order {
 
-    private Integer id;
+    private Long id;
 
     //用户Id
-    private Integer uid;
+    private Long uid;
 
     //取票电话
     private String phone;
 
     //场次id
-    private Integer aid;
+    private Long aid;
 
     //座位
     private String seats;
@@ -37,19 +37,19 @@ public class Order {
     private String payAt;
 
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public Integer getUid() {
+    public Long getUid() {
         return uid;
     }
 
-    public void setUid(Integer uid) {
+    public void setUid(Long uid) {
         this.uid = uid;
     }
 
@@ -61,11 +61,11 @@ public class Order {
         this.phone = phone;
     }
 
-    public Integer getAid() {
+    public Long getAid() {
         return aid;
     }
 
-    public void setAid(Integer aid) {
+    public void setAid(Long aid) {
         this.aid = aid;
     }
 

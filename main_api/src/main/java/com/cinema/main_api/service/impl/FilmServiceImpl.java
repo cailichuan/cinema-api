@@ -27,7 +27,7 @@ public class FilmServiceImpl implements FilmService {
     }
 
     @Override
-    public void deleteById(Integer id) {
+    public void deleteById(Long id) {
 
     }
 
@@ -52,7 +52,7 @@ public class FilmServiceImpl implements FilmService {
     }
 
     @Override
-    public Film findById(Integer id) {
+    public Film findById(Long id) {
         return readApi.findFilmById(id);
     }
 

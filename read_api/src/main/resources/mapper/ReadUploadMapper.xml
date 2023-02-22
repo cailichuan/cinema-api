@@ -10,4 +10,10 @@
         values
         (#{id},#{md5})
     </insert>
+
+    <select id="selectById" parameterType="Long" resultType="Upload">
+        select *
+        from cinema.t_upload
+        where id = #{id}
+    </select>
 </mapper>

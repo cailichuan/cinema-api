@@ -9,13 +9,13 @@ import lombok.NoArgsConstructor;
 
 public class Cart {
 
-    private Integer id;
+    private Long id;
 
     //用户id
-    private Integer uid;
+    private Long uid;
 
     //场次id
-    private Integer aid;
+    private Long aid;
 
     //座位号
     private String seats;
@@ -28,27 +28,27 @@ public class Cart {
     private Double price;
 
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public Integer getUid() {
+    public Long getUid() {
         return uid;
     }
 
-    public void setUid(Integer uid) {
+    public void setUid(Long uid) {
         this.uid = uid;
     }
 
-    public Integer getAid() {
+    public Long getAid() {
         return aid;
     }
 
-    public void setAid(Integer aid) {
+    public void setAid(Long aid) {
         this.aid = aid;
     }
 

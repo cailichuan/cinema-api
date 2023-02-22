@@ -9,7 +9,7 @@ import java.util.List;
 @Mapper
 public interface ReadUserMapper {
 
-    User selectById(Integer id);
+    User selectById(Long id);
 
     List<User> selectList();
 }

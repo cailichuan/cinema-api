@@ -12,13 +12,13 @@ public interface ArrangementService {
 
     List<Arrangement> findAll();
 
-    ArrangementVo findByFilmId(Integer fid);
+    ArrangementVo findByFilmId(Long fid);
 
-    List<Integer> getSeatsHaveSelected(Integer id);
+    List<Integer> getSeatsHaveSelected(Long id);
 
-    Map<String,Object> findById(Integer id);
+    Map<String,Object> findById(Long id);
 
-    void deleteById(Integer id);
+    void deleteById(Long id);
 
     Arrangement Update(Arrangement arrangement);
 }

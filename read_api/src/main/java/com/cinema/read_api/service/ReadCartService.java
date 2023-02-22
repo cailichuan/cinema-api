@@ -9,6 +9,6 @@ public interface ReadCartService {
 
 
 
-    List<CartVo> findAllByUserId(Integer id);
+    List<CartVo> findAllByUserId(Long id);
 
 }

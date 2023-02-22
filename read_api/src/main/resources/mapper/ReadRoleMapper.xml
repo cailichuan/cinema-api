@@ -4,10 +4,9 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cinema.read_api.mapper.ReadRoleMapper">
 
-    <insert id="insert" parameterType="Role">
-        inset into cinema.t_role
-        (id,wid,value,createAt)
-        values
-        (#{id},#{wid},#{value},#{createAt})
-    </insert>
+    <select id="selectListByWid" parameterType="Long" resultType="Role">
+        select *
+        from cinema.t_role
+        where wid = #{wid}
+    </select>
 </mapper>

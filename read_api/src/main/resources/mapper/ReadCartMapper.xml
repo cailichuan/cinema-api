@@ -4,7 +4,7 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cinema.read_api.mapper.ReadCartMapper">
 
-    <select id="selectListByUid" parameterType="Integer" resultType="Cart">
+    <select id="selectListByUid" parameterType="Long" resultType="Cart">
         select *
         from cinema.t_cart
         where uid = #{uid}

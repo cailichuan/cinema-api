@@ -19,7 +19,7 @@ public class ReadActivityServiceImpl implements ReadActivityService {
 
    //=============================================================
     @Override
-    public Activity finfById(Integer id) {
+    public Activity finfById(Long id) {
         return readActivityMapper.selectById(id);
     }
 

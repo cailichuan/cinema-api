@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface ReadActivityService{
 
-    Activity finfById(Integer id);
+    Activity finfById(Long id);
 
 
     List<Activity> findAll();

@@ -10,28 +10,28 @@ import lombok.NoArgsConstructor;
 
 public class Role {
 
-    private Integer id;
+    private Long id;
 
-    private Integer wid;
+    private Long wid;
 
     private String value;
 
     private String createAt;
 
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public Integer getWid() {
+    public Long getWid() {
         return wid;
     }
 
-    public void setWid(Integer wid) {
+    public void setWid(Long wid) {
         this.wid = wid;
     }
 

@@ -27,7 +27,7 @@ public class OrderController {
 
     @GetMapping("/user/{id}")
     @ApiOperation(value = "查询用户订单")
-    public List<OrderVo> findByUser(@PathVariable(value = "id") Integer id) {
+    public List<OrderVo> findByUser(@PathVariable(value = "id") Long id) {
         return orderService.findByUser(id);
     }
 

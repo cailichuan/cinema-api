@@ -22,14 +22,14 @@ public class WriteActivityServiceImpl implements WriteActivityService {
     @Override
     public void create(Activity activity) {
         snowId.setSonwIdType(SnowIdType.Activity);
-        Integer id = (int)snowId.nextId();
+        Long id = snowId.nextId();
         activity.setId(id);
 
         writeActivityMapper.insert(activity);
     }
 
     @Override
-    public void deleteById(Integer id) {
+    public void deleteById(Long id) {
 
     }
 }

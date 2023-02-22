@@ -9,9 +9,8 @@ public interface PosterService {
 
     void update(Poster poster);
 
-    List<Poster> findAll();
 
-    List<Poster> findByStatus(boolean status);
+    List<Poster> findByMap(Boolean status);
 
     void deleteById(Integer id);
 

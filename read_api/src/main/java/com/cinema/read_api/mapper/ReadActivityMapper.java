@@ -8,18 +8,15 @@ import org.apache.ibatis.annotations.Mapper;
 import java.util.List;
 
 @Mapper
-public interface ReadActivityMapper extends ActivityMapper {
+public interface ReadActivityMapper {
 
 
-    @Override
-    void insert(Activity activity);
 
-    @Override
-    Activity selectById(Integer id);
 
-    @Override
+    Activity selectById(Long id);
+
+
     List<Activity> selectList();
 
-    @Override
-    void deleteById(Integer id);
+
 }

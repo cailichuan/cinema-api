@@ -10,10 +10,10 @@ import lombok.NoArgsConstructor;
 
 public class Arrangement {
 
-    private Integer id;
+    private Long id;
 
     //电影id
-    private Integer fid;
+    private Long fid;
 
     //电影名
     private String name;
@@ -46,19 +46,19 @@ public class Arrangement {
     private  String createAt;
 
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public Integer getFid() {
+    public Long getFid() {
         return fid;
     }
 
-    public void setFid(Integer fid) {
+    public void setFid(Long fid) {
         this.fid = fid;
     }
 

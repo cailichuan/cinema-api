@@ -74,12 +74,6 @@
             <optional>true</optional>
         </dependency>
 
-        <!--log4j依赖 -->
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
-        </dependency>
 
         <!--swagger依赖 -->
         <dependency>

@@ -5,10 +5,10 @@ package model.entity;
  */
 public class LeavingMessage {
 
-    private Integer id;
+    private Long id;
 
     //用户id
-    private Integer uid;
+    private Long uid;
 
     private String reply;
 
@@ -18,19 +18,19 @@ public class LeavingMessage {
     private String createAt;
 
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public Integer getUid() {
+    public Long getUid() {
         return uid;
     }
 
-    public void setUid(Integer uid) {
+    public void setUid(Long uid) {
         this.uid = uid;
     }
 

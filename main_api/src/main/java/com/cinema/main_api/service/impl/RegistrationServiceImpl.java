@@ -1,6 +1,7 @@
 package com.cinema.main_api.service.impl;
 
 
+import api.read.ReadApi;
 import com.cinema.main_api.service.RegistrationService;
 import model.entity.Registration;
 import org.springframework.stereotype.Service;
@@ -12,9 +13,8 @@ import java.util.List;
 @Service
 public class RegistrationServiceImpl implements RegistrationService {
 
-    public RegistrationServiceImpl() {
-        super();
-    }
+    @Resource
+    private ReadApi readApi;
 
     @Override
     public void create(Registration registration) throws Exception {
@@ -28,7 +28,7 @@ public class RegistrationServiceImpl implements RegistrationService {
 
     @Override
     public List<Registration> findAll() {
-        return null;
+        return readApi.findAllReadRegistration();
     }
 
     @Override

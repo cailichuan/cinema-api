@@ -9,7 +9,7 @@ import java.util.Map;
 
 @Mapper
 public interface ReadFilmMapper {
-    Film selectById(Integer id);
+    Film selectById(Long id);
 
 
 

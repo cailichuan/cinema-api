@@ -34,8 +34,8 @@ public class ReadOrderServiceImpl  implements ReadOrderService {
     private ReadFilmMapper readFilmMapper;
 
     @Override
-    public List<OrderVo> findOrderVoList(Integer uid) {
-        Map<String,Integer> map =new HashMap<>();
+    public List<OrderVo> findOrderVoList(Long uid) {
+        Map<String,Long> map =new HashMap<>();
 
         if (uid!=null){
             map.put("uid",uid);

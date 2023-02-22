@@ -18,6 +18,6 @@ public interface ReadFilmService {
 
 
 
-    Film findById(Integer id);
+    Film findById(Long id);
 
 }

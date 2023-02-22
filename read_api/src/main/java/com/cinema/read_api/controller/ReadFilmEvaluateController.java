@@ -22,7 +22,7 @@ public class ReadFilmEvaluateController {
 
     @GetMapping("")
     @ApiOperation("获取电影评论")
-    public List<FilmEvaluateVo> list(@RequestParam(name = "fid") Integer fid) {
+    public List<FilmEvaluateVo> list(@RequestParam(name = "fid") Long fid) {
         if (fid != null) {
             return readFilmEvaluateService.findAllByFilmId(fid);
         }

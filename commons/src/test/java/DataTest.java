@@ -19,10 +19,6 @@ public class DataTest {
 
     @Test
     public void readExcelIntoMysql(){
-//        SqlSession sqlSession = MybatisUtils.getSqlSession();
-//
-//
-//        sqlSession.close();
 
     }
 

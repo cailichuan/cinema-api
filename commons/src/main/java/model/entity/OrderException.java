@@ -11,10 +11,10 @@ import lombok.NoArgsConstructor;
 
 public class OrderException {
 
-    private Integer id;
+    private Long id;
 
     //订单id
-    private Integer oid;
+    private Long oid;
 
     //异常原因
     private String reason;
@@ -33,19 +33,19 @@ public class OrderException {
     private String endAt;
 
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public Integer getOid() {
+    public Long getOid() {
         return oid;
     }
 
-    public void setOid(Integer oid) {
+    public void setOid(Long oid) {
         this.oid = oid;
     }
 

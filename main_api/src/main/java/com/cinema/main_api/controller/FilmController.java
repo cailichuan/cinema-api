@@ -44,7 +44,7 @@ public class FilmController {
 
     @GetMapping("/{id}")
     @ApiOperation("根据id查找电影")
-    public Film findById(@PathVariable(value = "id") Integer id){
+    public Film findById(@PathVariable(value = "id") Long id){
         return filmService.findById(id);
     }
 

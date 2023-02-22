@@ -10,5 +10,5 @@ import java.util.List;
 public interface ReadLeavingMessageMapper {
     List<LeavingMessage> selectList();
 
-    List<LeavingMessage> selectListByUid(Integer id);
+    List<LeavingMessage> selectListByUid(Long id);
 }

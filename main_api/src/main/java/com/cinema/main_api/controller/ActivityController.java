@@ -35,13 +35,13 @@ public class ActivityController {
 
     @GetMapping("{id}")
     @ApiOperation("根据id查找活动")
-    public Activity findById(@PathVariable(value = "id") Integer id) {
+    public Activity findById(@PathVariable(value = "id") Long id) {
         return activityService.finfById(id);
     }
 
     @DeleteMapping("{id}")
     @ApiOperation("删除活动")
-    public void delete(@PathVariable String id) {
+    public void delete(@PathVariable Long id) {
 
     }
 

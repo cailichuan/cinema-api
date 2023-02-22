@@ -36,19 +36,19 @@ public class ArrangementController {
 
     @GetMapping("/{id}")
     @ApiOperation("查询排片")
-    public Map<String,Object> findById(@PathVariable(value = "id") Integer id){
+    public Map<String,Object> findById(@PathVariable(value = "id") Long id){
         return  arrangementService.findById(id);
     }
 
     @GetMapping("/{id}/getSeats")
     @ApiOperation("获取座位情况")
-    public List<Integer> getSeats(@PathVariable(value = "id") Integer id){
+    public List<Integer> getSeats(@PathVariable(value = "id") Long id){
         return arrangementService.getSeatsHaveSelected(id);
     }
 
     @GetMapping("/film/{fid}")
     @ApiOperation("查询某个电影所有排片")
-    public ArrangementVo findByFilmId(@PathVariable(value = "fid") Integer fid){
+    public ArrangementVo findByFilmId(@PathVariable(value = "fid") Long fid){
         return arrangementService.findByFilmId(fid);
     }
 }

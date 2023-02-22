@@ -8,7 +8,7 @@ public interface FilmService {
 
     void save(Film film);
 
-    void deleteById(Integer id);
+    void deleteById(Long id);
 
     List<Film> findAll();
 
@@ -20,7 +20,7 @@ public interface FilmService {
     //根据电影名模糊查询
     List<Film> findLikeName(String name);
 
-    Film findById(Integer id);
+    Film findById(Long id);
 
     Film update(Film film);
 }

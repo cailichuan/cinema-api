@@ -8,6 +8,6 @@ import java.util.List;
 
 @Mapper
 public interface ReadFilmEvaluateMapper {
-    List<FilmEvaluate> selectListByFid(Integer fid);
+    List<FilmEvaluate> selectListByFid(Long fid);
 
 }

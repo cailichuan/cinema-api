@@ -10,11 +10,11 @@ public interface OrderService {
 
     Order create(Cart cart);
 
-    Order pay(Integer id);
+    Order pay(Long id);
 
     void update(Order order);
 
     List<OrderVo> findAll();
 
-    List<OrderVo> findByUser(Integer uid);
+    List<OrderVo> findByUser(Long uid);
 }

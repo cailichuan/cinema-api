@@ -9,13 +9,13 @@
         from cinema.t_arrangement
     </select>
 
-    <select id="selectListByFid" parameterType="Integer" resultType="Arrangement">
+    <select id="selectListByFid" parameterType="Long" resultType="Arrangement">
         select *
         from cinema.t_arrangement
         where fid = #{fid}
     </select>
 
-    <select id="selectById" parameterType="Integer" resultType="Arrangement">
+    <select id="selectById" parameterType="Long" resultType="Arrangement">
         select *
         from cinema.t_arrangement
         where id = #{id}

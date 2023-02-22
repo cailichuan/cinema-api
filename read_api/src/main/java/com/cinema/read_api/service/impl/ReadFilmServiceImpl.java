@@ -24,7 +24,7 @@ public class ReadFilmServiceImpl implements ReadFilmService {
     }
 
     @Override
-    public Film findById(Integer id) {
+    public Film findById(Long id) {
         return readFilmMapper.selectById(id);
     }
 }

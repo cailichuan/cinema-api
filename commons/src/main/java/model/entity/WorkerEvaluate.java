@@ -9,13 +9,13 @@ import lombok.NoArgsConstructor;
 
 public class WorkerEvaluate {
 
-    private Integer id;
+    private Long id;
 
     //客服id
-    private Integer wid;
+    private Long wid;
 
     //评价的用户id
-    private Integer uid;
+    private Long uid;
 
     //评价的内容
     private String content;
@@ -26,27 +26,27 @@ public class WorkerEvaluate {
     private String creatAt;
 
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public Integer getWid() {
+    public Long getWid() {
         return wid;
     }
 
-    public void setWid(Integer wid) {
+    public void setWid(Long wid) {
         this.wid = wid;
     }
 
-    public Integer getUid() {
+    public Long getUid() {
         return uid;
     }
 
-    public void setUid(Integer uid) {
+    public void setUid(Long uid) {
         this.uid = uid;
     }
 

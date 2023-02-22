@@ -11,5 +11,5 @@ public interface ReadOrderService {
 
 
 
-    List<OrderVo> findOrderVoList(Integer Uid);
+    List<OrderVo> findOrderVoList(Long Uid);
 }

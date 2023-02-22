@@ -28,7 +28,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public Order pay(Integer id) {
+    public Order pay(Long id) {
         return null;
     }
 
@@ -43,7 +43,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public List<OrderVo> findByUser(Integer uid) {
+    public List<OrderVo> findByUser(Long uid) {
         return readApi.findOrderVoByUserId(uid);
     }
 }

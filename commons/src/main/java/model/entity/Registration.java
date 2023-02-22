@@ -8,37 +8,37 @@ import lombok.Data;
 
 public class Registration {
 
-    private Integer id;
+    private Long id;
 
     //活动id
-    private Integer aid;
+    private Long aid;
 
     //报名用户id
-    private Integer uid;
+    private Long uid;
 
     private String createAt;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public Integer getAid() {
+    public Long getAid() {
         return aid;
     }
 
-    public void setAid(Integer aid) {
+    public void setAid(Long aid) {
         this.aid = aid;
     }
 
-    public Integer getUid() {
+    public Long getUid() {
         return uid;
     }
 
-    public void setUid(Integer uid) {
+    public void setUid(Long uid) {
         this.uid = uid;
     }
 

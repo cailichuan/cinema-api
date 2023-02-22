@@ -8,22 +8,22 @@ import lombok.Data;
 
 public class Poster {
 
-    private Integer id;
+    private Long id;
 
     private String title;
 
     private String url;
 
     //上架 下架
-    private boolean status;
+    private Boolean status;
 
     private String creatAt;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

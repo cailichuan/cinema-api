@@ -38,22 +38,22 @@ public class ArrangementServiceImpl implements ArrangementService {
     }
 
     @Override
-    public ArrangementVo findByFilmId(Integer fid) {
+    public ArrangementVo findByFilmId(Long fid) {
         return readApi.findArrangemenByFilmId(fid);
     }
 
     @Override
-    public List<Integer> getSeatsHaveSelected(Integer id) {
+    public List<Integer> getSeatsHaveSelected(Long id) {
         return readApi.getArrangementSeats(id);
     }
 
     @Override
-    public Map<String,Object> findById(Integer id) {
+    public Map<String,Object> findById(Long id) {
         return readApi.findArrangementById(id);
     }
 
     @Override
-    public void deleteById(Integer id) {
+    public void deleteById(Long id) {
 
     }
 

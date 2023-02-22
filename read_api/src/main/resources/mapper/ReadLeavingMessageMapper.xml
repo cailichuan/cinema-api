@@ -9,7 +9,7 @@
         from cinema.t_leaving_message
     </select>
 
-    <select id="selectListByUid" parameterType="Integer" resultType="LeavingMessage">
+    <select id="selectListByUid" parameterType="Long" resultType="LeavingMessage">
         select *
         from cinema.t_leaving_message
         where uid = #{uid}

@@ -24,7 +24,7 @@ public class WriteActivityController {
 
     @DeleteMapping("{id}")
     @ApiOperation("删除活动")
-    public void delete(@PathVariable Integer id){
+    public void delete(@PathVariable Long id){
         writeActivityService.deleteById(id);
     }
 }

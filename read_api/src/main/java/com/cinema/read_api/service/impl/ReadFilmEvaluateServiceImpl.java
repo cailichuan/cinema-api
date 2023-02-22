@@ -20,7 +20,7 @@ public class ReadFilmEvaluateServiceImpl implements ReadFilmEvaluateService {
     @Resource
     private ReadUserMapper readUserMapper;
     @Override
-    public List<FilmEvaluateVo> findAllByFilmId(Integer fid) {
+    public List<FilmEvaluateVo> findAllByFilmId(Long fid) {
         List<FilmEvaluateVo> result = new ArrayList<>();
         List<FilmEvaluate> filmEvaluates = readFilmEvaluateMapper.selectListByFid(fid);
         for (FilmEvaluate filmEvaluate : filmEvaluates) {

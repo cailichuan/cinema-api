@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 
 public class Activity {
 
-    private Integer id;
+    private Long id;
 
     private String content;
 
@@ -22,11 +22,11 @@ public class Activity {
 
     private  String createAt;
 
-    public void  setId(Integer id){
+    public void  setId(Long id){
         this.id=id;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
