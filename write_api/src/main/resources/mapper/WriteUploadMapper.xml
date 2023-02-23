@@ -10,4 +10,26 @@
         values
         (#{id},#{path},#{suffix})
     </insert>
+
+    <select id="selectByMap" parameterType="Map" resultType="Upload">
+        select *
+        from cinema.t_upload
+        <where>
+            <if test="id!=null">
+                id = #{id}
+            </if>
+        </where>
+    </select>
+
+    <delete id="deleteByMap" parameterType="Map">
+        delete from cinema.t_upload
+        <where>
+            <if test="id!=null">
+                id = #{id}
+            </if>
+            <if test="path!=null">
+                and path = #{path}
+            </if>
+        </where>
+    </delete>
 </mapper>

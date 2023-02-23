@@ -5,9 +5,23 @@
 <mapper namespace="com.cinema.write_api.mapper.WriteOrderExceptionMapper">
 
     <insert id="insert" parameterType="OrderException">
-        inset into cinema.t_order_exception
+        insert into cinema.t_order_exception
         (id,oid,reason,reviewer,status,result,createAt,endAt)
         values
         (#{id},#{oid},#{reason},#{reviewer},#{status},#{result},#{createAt},#{endAt})
     </insert>
+
+    <update id="update" parameterType="OrderException">
+        update cinema.t_order_exception
+        set
+        oid = #{oid},
+        reason = #{reason},
+        reviewer = #{reviewer},
+        status = #{status},
+        result = #{result},
+        createAt = #{createAt},
+        endAt = #{endAt}
+
+        where id = #{id}
+    </update>
 </mapper>

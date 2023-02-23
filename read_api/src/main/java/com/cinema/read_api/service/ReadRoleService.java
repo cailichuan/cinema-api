@@ -9,5 +9,7 @@ public interface ReadRoleService {
 
     List<Role> listRolesByWorkerId(Long wid);
 
+    Role findById(Long id);
+
 
 }

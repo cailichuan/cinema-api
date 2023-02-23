@@ -12,12 +12,12 @@ public class Poster {
 
     private String title;
 
-    private String url;
+    private Long upid;
 
     //上架 下架
     private Boolean status;
 
-    private String creatAt;
+    private String createAt;
 
     public Long getId() {
         return id;
@@ -35,27 +35,48 @@ public class Poster {
         this.title = title;
     }
 
-    public String getUrl() {
-        return url;
+
+    public Long getUpid() {
+        return upid;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setUpid(Long upid) {
+        this.upid = upid;
     }
 
-    public boolean isStatus() {
+    public Boolean getStatus() {
         return status;
     }
 
-    public void setStatus(boolean status) {
+    public void setStatus(Boolean status) {
         this.status = status;
     }
 
     public String getCreatAt() {
-        return creatAt;
+        return createAt;
     }
 
     public void setCreatAt(String creatAt) {
-        this.creatAt = creatAt;
+        this.createAt = creatAt;
+    }
+
+
+    public Poster(Long id, String title, Long upid, Boolean status, String createAt) {
+        this.id = id;
+        this.title = title;
+        this.upid = upid;
+        this.status = status;
+        this.createAt = createAt;
+    }
+
+    @Override
+    public String toString() {
+        return "Poster{" +
+                "id:" + id +
+                ", title:'" + title + '\'' +
+                ", upid:" + upid +
+                ", status:" + status +
+                ", creatAt:'" + createAt + '\'' +
+                '}';
     }
 }

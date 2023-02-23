@@ -5,9 +5,40 @@
 <mapper namespace="com.cinema.write_api.mapper.WriteFilmEvaluateMapper">
 
     <insert id="insert" parameterType="FilmEvaluate">
-        inset into cinema.t_film_evaluate
+        insert into cinema.t_film_evaluate
         (id,fid,uid,star,comment,createAt)
         values
         (#{id},#{fid},#{uid},#{star},#{comment},#{createAt})
     </insert>
+
+    <select id="selectByMap" parameterType="Map" resultType="FilmEvaluate">
+        select *
+        from cinema.t_film_evaluate
+        <where>
+            <if test="id!=null">
+                id = #{id}
+            </if>
+            <if test="fid!=null">
+                and fid = #{fid}
+            </if>
+            <if test="uid!=null">
+                and uid = #{uid}
+            </if>
+        </where>
+    </select>
+
+    <delete id="deleteByMap" parameterType="Map">
+        delete from cinema.t_film_evaluate
+        <where>
+            <if test="id!=null">
+                id = #{id}
+            </if>
+            <if test="fid!=null">
+                and fid = #{fid}
+            </if>
+            <if test="uid">
+                and uid = #{uid}
+            </if>
+        </where>
+    </delete>
 </mapper>

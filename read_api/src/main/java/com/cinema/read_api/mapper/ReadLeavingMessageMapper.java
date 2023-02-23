@@ -5,10 +5,11 @@ import model.entity.LeavingMessage;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface ReadLeavingMessageMapper {
-    List<LeavingMessage> selectList();
+    List<LeavingMessage> selectListByMap(Map map);
 
-    List<LeavingMessage> selectListByUid(Long id);
+
 }

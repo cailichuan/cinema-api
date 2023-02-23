@@ -14,4 +14,9 @@ public interface ReadLeavingMessageService {
 
     //获取活跃留言的用户
     List<ActiveUserVo> findActiveUsers();
+
+
+    List<LeavingMessage> selectListByUid(Long uid);
+
+    LeavingMessage findById(Long id);
 }

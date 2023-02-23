@@ -4,9 +4,16 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cinema.read_api.mapper.ReadFilmEvaluateMapper">
 
-    <select id="selectListByFid" parameterType="Long" resultType="FilmEvaluate">
+    <select id="selectListByMap" parameterType="Map" resultType="FilmEvaluate">
         select *
         from cinema.t_film_evaluate
-        where fid = #{fid}
+        <where>
+            <if test="fid!=null">
+                fid = #{fid}
+            </if>
+            <if test="id!=null">
+                and id = #{id}
+            </if>
+        </where>
     </select>
 </mapper>

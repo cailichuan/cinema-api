@@ -96,4 +96,18 @@ public class OrderException {
     public void setEndAt(String endAt) {
         this.endAt = endAt;
     }
+
+    @Override
+    public String toString() {
+        return "OrderException{" +
+                "id:" + id +
+                ", oid:" + oid +
+                ", reason:'" + reason + '\'' +
+                ", reviewer:'" + reviewer + '\'' +
+                ", status:" + status +
+                ", result:'" + result + '\'' +
+                ", createAt:'" + createAt + '\'' +
+                ", endAt:'" + endAt + '\'' +
+                '}';
+    }
 }

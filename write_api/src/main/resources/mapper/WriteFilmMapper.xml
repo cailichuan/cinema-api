@@ -5,9 +5,42 @@
 <mapper namespace="com.cinema.write_api.mapper.WriteFilmMapper">
 
     <insert id="insert" parameterType="Film">
-        inset into cinema.t_film
+        insert into cinema.t_film
         (id,name,releaseTime,type,status,region,introduction,hot,cover,duration)
         values
         (#{id},#{name},#{releaseTime},#{type},#{status},#{region},#{introduction},#{hot},#{cover},#{duration})
     </insert>
+
+    <update id="update" parameterType="Film">
+        update cinema.t_film
+        set
+        name = #{name},
+        releaseTime = #{releaseTime},
+        type = #{type},
+        status = #{status},
+        region = #{region},
+        introduction = #{introduction},
+        hot = #{hot},
+        cover = #{cover},
+        duration = #{duration}
+        where id = #{id}
+    </update>
+
+    <delete id="deleteByMap" parameterType="Map">
+        delete from cinema.t_film
+        where id = #{id}
+    </delete>
+
+
+    <select id="selectByMap" parameterType="Map" resultType="Film">
+        select *
+        from cinema.t_film
+        <where>
+            <if test="id!=null">
+                id = #{id}
+            </if>
+        </where>
+    </select>
+
+
 </mapper>

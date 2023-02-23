@@ -7,4 +7,6 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface WriteLeavingMessageMapper {
     void insert(LeavingMessage leavingMessage);
+
+    void update(LeavingMessage leavingMessage);
 }

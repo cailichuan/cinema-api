@@ -8,13 +8,13 @@ import java.util.List;
 
 public interface OrderService {
 
-    Order create(Cart cart);
+    void create(Cart cart,String uuid) throws Exception;
 
-    Order pay(Long id);
+    Order pay(Long id) throws Exception;
 
-    void update(Order order);
+    void update(Order order,String uuid) throws Exception;
 
-    List<OrderVo> findAll();
+    List<OrderVo> findAll() throws ClassNotFoundException;
 
-    List<OrderVo> findByUser(Long uid);
+    List<OrderVo> findByUser(Long uid) throws ClassNotFoundException;
 }

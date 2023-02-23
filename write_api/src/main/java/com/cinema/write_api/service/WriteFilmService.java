@@ -8,7 +8,7 @@ public interface WriteFilmService {
 
     void save(Film film);
 
-    void deleteById(Integer id);
+    void deleteById(Long id);
 
 
 

@@ -12,6 +12,6 @@ public interface WriteFilmEvaluateService {
 
 
 
-    public void deleteAllByFilmId(Integer fid);
-    public void deleteById(Integer id);
+    public void deleteAllByFilmId(Long fid);
+    public void deleteById(Long id);
 }

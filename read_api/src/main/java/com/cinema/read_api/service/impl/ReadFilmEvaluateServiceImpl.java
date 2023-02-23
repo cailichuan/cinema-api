@@ -9,7 +9,9 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class ReadFilmEvaluateServiceImpl implements ReadFilmEvaluateService {
@@ -22,7 +24,11 @@ public class ReadFilmEvaluateServiceImpl implements ReadFilmEvaluateService {
     @Override
     public List<FilmEvaluateVo> findAllByFilmId(Long fid) {
         List<FilmEvaluateVo> result = new ArrayList<>();
-        List<FilmEvaluate> filmEvaluates = readFilmEvaluateMapper.selectListByFid(fid);
+
+        Map<String,Long> map = new HashMap<>();
+        map.put("fid",fid);
+
+        List<FilmEvaluate> filmEvaluates = readFilmEvaluateMapper.selectListByMap(map);
         for (FilmEvaluate filmEvaluate : filmEvaluates) {
             FilmEvaluateVo filmEvaluateVo = new FilmEvaluateVo(filmEvaluate.getId(),filmEvaluate,readUserMapper.selectById(filmEvaluate.getUid()));
 
@@ -30,5 +36,16 @@ public class ReadFilmEvaluateServiceImpl implements ReadFilmEvaluateService {
             result.add(filmEvaluateVo);
         }
         return result;
+    }
+
+    @Override
+    public FilmEvaluate findById(Long id) {
+
+        Map<String,Long> map = new HashMap<>();
+        map.put("id",id);
+
+        List<FilmEvaluate> filmEvaluates = readFilmEvaluateMapper.selectListByMap(map);
+
+        return filmEvaluates==null? null:filmEvaluates.get(0);
     }
 }

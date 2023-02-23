@@ -17,7 +17,7 @@ public class DailyWork {
     private String content;
 
     //上传时间
-    private  String creatAt;
+    private  String createAt;
 
     public Long getId() {
         return id;
@@ -43,11 +43,21 @@ public class DailyWork {
         this.content = content;
     }
 
-    public String getCreatAt() {
-        return creatAt;
+    public String getCreateAt() {
+        return createAt;
     }
 
-    public void setCreatAt(String creatAt) {
-        this.creatAt = creatAt;
+    public void setCreateAt(String creatAt) {
+        this.createAt = creatAt;
+    }
+
+    @Override
+    public String toString() {
+        return "DailyWork{" +
+                "id:" + id +
+                ", type:" + type +
+                ", content:'" + content + '\'' +
+                ", creatAt:'" + createAt + '\'' +
+                '}';
     }
 }

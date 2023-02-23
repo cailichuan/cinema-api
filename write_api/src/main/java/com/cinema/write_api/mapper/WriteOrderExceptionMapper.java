@@ -8,4 +8,6 @@ import org.apache.ibatis.annotations.Mapper;
 public interface WriteOrderExceptionMapper {
 
     void insert(OrderException orderException);
+
+    void update(OrderException orderException);
 }

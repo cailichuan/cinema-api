@@ -5,9 +5,37 @@
 <mapper namespace="com.cinema.write_api.mapper.WriteRoleMapper">
 
     <insert id="insert" parameterType="Role">
-        inset into cinema.t_role
+        insert into cinema.t_role
         (id,wid,value,createAt)
         values
         (#{id},#{wid},#{value},#{createAt})
     </insert>
+
+    <select id="selectByMap" parameterType="Map" resultType="Role">
+        select *
+        from cinema.t_role
+        <where>
+            <if test="id!=null">
+                id =  #{id}
+            </if>
+            <if test="wid!=null">
+                and wid = #{wid}
+            </if>
+            <if test="value!=null">
+                and value = #{value}
+            </if>
+        </where>
+    </select>
+
+    <delete id="deleteByMap" parameterType="Map">
+        delete from cinema.t_role
+        <where>
+            <if test="id!=null">
+                id = #{id}
+            </if>
+            <if test="wid!=null">
+                and wid = #{wid}
+            </if>
+        </where>
+    </delete>
 </mapper>

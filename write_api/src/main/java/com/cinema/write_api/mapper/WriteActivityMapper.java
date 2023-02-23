@@ -6,6 +6,7 @@ import model.entity.Activity;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface WriteActivityMapper {
@@ -16,5 +17,11 @@ public interface WriteActivityMapper {
 
 
 
-    void deleteById(Integer id);
+    void deleteByMap(Map map);
+
+
+    List<Activity> selectByMap(Map map);
+
+
+    void update(Activity activity);
 }

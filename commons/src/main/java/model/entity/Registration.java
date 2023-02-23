@@ -49,4 +49,14 @@ public class Registration {
     public void setCreateAt(String createAt) {
         this.createAt = createAt;
     }
+
+    @Override
+    public String toString() {
+        return "Registration{" +
+                "id:" + id +
+                ", aid:" + aid +
+                ", uid:" + uid +
+                ", createAt:'" + createAt + '\'' +
+                '}';
+    }
 }

@@ -7,9 +7,9 @@ import java.util.List;
 public interface WriteRoleService {
     Role create(Role role) throws Exception;
 
-    void deleteById(Integer id) throws Exception;
+    void deleteById(Long id) throws Exception;
 
 
 
-    void deleteWorkerAllRoles(Integer wid);
+    void deleteWorkerAllRoles(Long wid);
 }

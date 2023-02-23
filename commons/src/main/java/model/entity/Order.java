@@ -108,4 +108,19 @@ public class Order {
     public void setPayAt(String payAt) {
         this.payAt = payAt;
     }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id:" + id +
+                ", uid:" + uid +
+                ", phone:'" + phone + '\'' +
+                ", aid:" + aid +
+                ", seats:'" + seats + '\'' +
+                ", price:" + price +
+                ", status:" + status +
+                ", createAt:'" + createAt + '\'' +
+                ", payAt:'" + payAt + '\'' +
+                '}';
+    }
 }

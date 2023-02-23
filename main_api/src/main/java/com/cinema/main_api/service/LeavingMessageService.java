@@ -8,12 +8,12 @@ import java.util.List;
 
 public interface LeavingMessageService {
 
-    void save(LeavingMessage leavingMessage);
+    void save(LeavingMessage leavingMessage,String uuid) throws Exception;
 
-    void reply(LeavingMessage leavingMessage);
+    void reply(LeavingMessage leavingMessage,String uuid) throws Exception;
 
-    List<LeavingMessageVo> findAll();
+    List<LeavingMessageVo> findAll() throws ClassNotFoundException;
 
     //获取活跃留言的用户
-    List<ActiveUserVo> findActiveUsers();
+    List<ActiveUserVo> findActiveUsers() throws ClassNotFoundException;
 }

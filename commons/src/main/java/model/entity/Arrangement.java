@@ -141,4 +141,22 @@ public class Arrangement {
     public void setCreateAt(String createAt) {
         this.createAt = createAt;
     }
+
+    @Override
+    public String toString() {
+        return "Arrangement{" +
+                "id:" + id +
+                ", fid:" + fid +
+                ", name:'" + name + '\'' +
+                ", seatNumber:" + seatNumber +
+                ", price:" + price +
+                ", type:'" + type + '\'' +
+                ", date:'" + date + '\'' +
+                ", startTime:'" + startTime + '\'' +
+                ", boxOffice:'" + boxOffice + '\'' +
+                ", endTime:'" + endTime + '\'' +
+                ", founder:'" + founder + '\'' +
+                ", createAt:'" + createAt + '\'' +
+                '}';
+    }
 }

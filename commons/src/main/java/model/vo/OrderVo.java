@@ -50,4 +50,15 @@ public class OrderVo {
     public void setArrangement(Arrangement arrangement) {
         this.arrangement = arrangement;
     }
+
+    public OrderVo(Order order, User user, Film film, Arrangement arrangement) {
+        this.order = order;
+        this.user = user;
+        this.film = film;
+        this.arrangement = arrangement;
+    }
+
+    public OrderVo(){
+
+    }
 }

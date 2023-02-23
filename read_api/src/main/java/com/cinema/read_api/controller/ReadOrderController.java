@@ -3,11 +3,9 @@ package com.cinema.read_api.controller;
 import com.cinema.read_api.service.ReadOrderService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import model.entity.Order;
 import model.vo.OrderVo;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -30,6 +28,12 @@ public class ReadOrderController {
     @ApiOperation(value = "查询用户订单")
     public List<OrderVo> findByUserId(@PathVariable(value = "id") Long id) {
         return readOrderService.findOrderVoList(id);
+    }
+
+    @PostMapping("")
+    @ApiOperation("根据订单id查询订单")
+    public Order findById(@RequestParam(name = "id") Long id){
+        return readOrderService.findOrderById(id);
     }
 
 }

@@ -18,7 +18,6 @@ public class Role {
 
     private String createAt;
 
-
     public Long getId() {
         return id;
     }
@@ -48,6 +47,27 @@ public class Role {
     }
 
     public void setCreateAt(String createAt) {
+        this.createAt = createAt;
+    }
+
+    @Override
+    public String toString() {
+        return "Role{" +
+                "id:" + id +
+                ", wid:" + wid +
+                ", value:'" + value + '\'' +
+                ", createAt:'" + createAt + '\'' +
+                '}';
+    }
+
+
+    public Role(){
+
+    }
+    public Role(Long id, Long wid, String value, String createAt) {
+        this.id = id;
+        this.wid = wid;
+        this.value = value;
         this.createAt = createAt;
     }
 }

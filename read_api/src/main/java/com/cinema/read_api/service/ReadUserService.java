@@ -8,18 +8,15 @@ import java.util.List;
 
 public interface ReadUserService {
 
-    User login(LoginDto dto) throws Exception;
+
+
+    User findByUserName(String userName);
+
+    User findById(Long id);
+
 
     List<User> findAll();
 
-    User findById(Integer id);
 
-    User update(User user);
-
-    User save(User user) throws Exception;
-
-    User findByUsername(String username);
-
-    void deleteById(Integer id);
 
 }

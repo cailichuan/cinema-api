@@ -74,4 +74,17 @@ public class FilmEvaluate {
     public void setCreateAt(String createAt) {
         this.createAt = createAt;
     }
+
+
+    @Override
+    public String toString() {
+        return "FilmEvaluate{" +
+                "id:" + id +
+                ", fid:" + fid +
+                ", uid:" + uid +
+                ", star:" + star +
+                ", comment:'" + comment + '\'' +
+                ", createAt:'" + createAt + '\'' +
+                '}';
+    }
 }

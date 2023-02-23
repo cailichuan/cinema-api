@@ -53,4 +53,18 @@ public class ReadOrderServiceImpl  implements ReadOrderService {
         }
         return result;
     }
+
+
+    @Override
+    public Order findOrderById(Long id) {
+
+        Map<String,Long> map = new HashMap<>();
+        map.put("id",id);
+
+        List<Order> orders = readOrderMapper.selectListByMap(map);
+        Order order = null;
+
+       return order= orders==null? null: orders.get(0);
+
+    }
 }

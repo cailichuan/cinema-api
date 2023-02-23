@@ -11,7 +11,9 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class ReadLeavingMessageServiceImpl  implements ReadLeavingMessageService {
@@ -23,7 +25,7 @@ public class ReadLeavingMessageServiceImpl  implements ReadLeavingMessageService
     private ReadUserMapper readUserMapper;
     @Override
     public List<LeavingMessageVo> findAll() {
-        List<LeavingMessage> leavingMessages = readLeavingMessageMapper.selectList();
+        List<LeavingMessage> leavingMessages = readLeavingMessageMapper.selectListByMap(null);
         List<LeavingMessageVo> result = new ArrayList<>();
         for (LeavingMessage leavingMessage : leavingMessages) {
             User user = readUserMapper.selectById(leavingMessage.getUid());
@@ -39,7 +41,9 @@ public class ReadLeavingMessageServiceImpl  implements ReadLeavingMessageService
         for (User user : users) {
             ActiveUserVo activeUserVo = new ActiveUserVo();
             activeUserVo.setUser(user);
-            activeUserVo.setNumber(readLeavingMessageMapper.selectListByUid(user.getId()).size());
+            Map<String,Long> map = new HashMap<>();
+            map.put("uid",user.getId());
+            activeUserVo.setNumber(readLeavingMessageMapper.selectListByMap(map).size());
             result.add(activeUserVo);
 
         }
@@ -47,5 +51,25 @@ public class ReadLeavingMessageServiceImpl  implements ReadLeavingMessageService
         //按照留言数量排序
         result.sort((v1,v2) -> v2.getNumber().compareTo(v1.getNumber()));
         return result;
+    }
+
+
+    @Override
+    public List<LeavingMessage> selectListByUid(Long uid) {
+        Map<String,Long> map = new HashMap<>();
+        map.put("uid",uid);
+
+        return readLeavingMessageMapper.selectListByMap(map);
+    }
+
+
+    @Override
+    public LeavingMessage findById(Long id) {
+        Map<String,Long> map = new HashMap<>();
+        map.put("id",id);
+
+        List<LeavingMessage> leavingMessages = readLeavingMessageMapper.selectListByMap(map);
+
+        return leavingMessages==null? null: leavingMessages.get(0);
     }
 }

@@ -9,8 +9,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="main_api" />
         <module name="write_api" />
-        <module name="commons" />
         <module name="read_api" />
+        <module name="commons" />
         <module name="eureka" />
       </profile>
     </annotationProcessing>

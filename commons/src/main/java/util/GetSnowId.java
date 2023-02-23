@@ -1,9 +1,11 @@
 package util;
 
 
+import org.springframework.stereotype.Component;
 import type.SnowIdType;
 
-public class GetSnowId {
+
+public final class GetSnowId {
     //序列号位数
     private static final long serialNumberBit=12L;
     //服务ID位数

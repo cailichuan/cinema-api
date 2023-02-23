@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import model.entity.Arrangement;
 import model.entity.Cart;
 import model.entity.Film;
+import type.RedisTable;
 
 /**
  * 购物车前端展示
@@ -18,6 +19,8 @@ public class CartVo {
     private Arrangement arrangement;
 
     private Cart cart;
+
+
 
     public Film getFilm() {
         return film;

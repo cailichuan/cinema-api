@@ -57,4 +57,15 @@ public class LeavingMessage {
     public void setCreateAt(String createAt) {
         this.createAt = createAt;
     }
+
+    @Override
+    public String toString() {
+        return "LeavingMessage{" +
+                "id:" + id +
+                ", uid:" + uid +
+                ", reply:'" + reply + '\'' +
+                ", content:'" + content + '\'' +
+                ", createAt:'" + createAt + '\'' +
+                '}';
+    }
 }

@@ -8,5 +8,5 @@ public interface WriteDailyWorkService {
 
     void save(DailyWork dailyWork);
 
-    void deleteById(Integer id);
+    void deleteById(Long id);
 }

@@ -5,9 +5,39 @@
 <mapper namespace="com.cinema.write_api.mapper.WritePosterMapper">
 
     <insert id="insert" parameterType="Poster">
-        inset into cinema.t_poster
-        (id,title,url,status,createAt)
+        insert into cinema.t_poster
+        (id,title,upid,status,createAt)
         values
-        (#{id},#{title},#{url},#{status},#{createAt})
+        (#{id},#{title},#{upid},#{status},#{createAt})
     </insert>
+
+    <update id="update" parameterType="Poster">
+        update cinema.t_poster
+        set
+        title = #{title},
+        upid = #{upid},
+        status = #{status},
+        createAt = #{createAt}
+
+        where id = #{id}
+    </update>
+
+    <delete id="deleteByMap" parameterType="Map">
+        delete from cinema.t_poster
+        <where>
+            <if test="id!=null">
+                id = #{id}
+            </if>
+        </where>
+    </delete>
+
+    <select id="selectByMap" parameterType="Map" resultType="Poster">
+        select *
+        from cinema.t_poster
+        <where>
+            <if test="id!=null">
+                id = #{id}
+            </if>
+        </where>
+    </select>
 </mapper>

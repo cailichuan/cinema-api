@@ -8,11 +8,13 @@ import java.util.List;
 
 public interface WriteOrderService {
 
-    Order create(Cart cart);
+    Order create(Cart cart) throws Exception;
 
-    Order pay(Integer id);
+    Order pay(Long id) throws Exception;
 
     void update(Order order);
+
+
 
 
 }

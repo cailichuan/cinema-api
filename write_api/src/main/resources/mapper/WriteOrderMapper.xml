@@ -5,9 +5,37 @@
 <mapper namespace="com.cinema.write_api.mapper.WriteOrderMapper">
 
     <insert id="insert" parameterType="Order">
-        inset into cinema.t_order
+        insert into cinema.t_order
         (id,uid,phone,aid,seats,price,status,createAt,payAt)
         values
         (#{id},#{uid},#{phone},#{aid},#{seats},#{price},#{status},#{createAt},#{payAt})
     </insert>
+
+    <update id="update" parameterType="Order">
+        update cinema.t_order
+        set
+        uid = #{uid},
+        phone = #{phone},
+        aid = #{aid},
+        seats = #{seats},
+        price = #{price},
+        status = #{status},
+        createAt = #{createAt},
+        payAt = #{payAt}
+
+        where id = #{id}
+    </update>
+
+    <select id="selectListByMap" parameterType="Map" resultType="Order">
+        select *
+        from cinema.t_order
+        <where>
+            <if test="id!=null">
+                id = #{id}
+            </if>
+            <if test="aid!=null">
+               and aid = #{aid}
+            </if>
+        </where>
+    </select>
 </mapper>

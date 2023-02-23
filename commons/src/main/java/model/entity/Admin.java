@@ -51,4 +51,14 @@ public class Admin {
     public void setAvatar(String avatar) {
         this.avatar = avatar;
     }
+
+    @Override
+    public String toString() {
+        return "Admin{" +
+                "id:" + id +
+                ", username:'" + username + '\'' +
+                ", password:'" + password + '\'' +
+                ", avatar:'" + avatar + '\'' +
+                '}';
+    }
 }

@@ -5,9 +5,42 @@
 <mapper namespace="com.cinema.write_api.mapper.WriteUserMapper">
 
     <insert id="insert" parameterType="User">
-        inset into cinema.t_user
-        (id,username,password,nickname,email,birthday,gender,info,avatar,createAt,updateAt)
+        insert into cinema.t_user
+        (id,username,password,nickname,email,birthday,gender,info,upid,createAt,updateAt)
         values
-        (#{id},#{username},#{password},#{nickname},#{email},#{birthday},#{gender},#{info},#{avatar},#{createAt},#{updateAt})
+        (#{id},#{username},#{password},#{nickname},#{email},#{birthday},#{gender},#{info},#{upid},#{createAt},#{updateAt})
     </insert>
+
+    <select id="countByUserName" parameterType="String" resultType="Integer">
+        select count(username)
+        from cinema.t_user
+        where username = #{username}
+    </select>
+
+    <delete id="deleteByMap" parameterType="Map">
+        delete from cinema.t_user
+        <where>
+            <if test="id!=null">
+                id = #{id}
+            </if>
+        </where>
+    </delete>
+
+    <update id="update" parameterType="User">
+        update cinema.t_user
+        set
+        username = #{username},
+        password = #{password},
+        nickname = #{nickname},
+        email = #{email},
+        birthday = #{birthday},
+        gender = #{gender},
+        info = {info},
+        upid = #{upid},
+        createAt = #{createAt},
+        updateAt = #{updateAt}
+
+        where id = #{id}
+
+    </update>
 </mapper>

@@ -8,16 +8,15 @@ import java.util.List;
 
 public interface ReadWorkerService {
 
-    Worker create(Worker worker) throws Exception;
+
 
     Worker login(LoginDto dto) throws Exception;
 
-    void update(Worker worker) throws Exception;
+
 
     List<Worker> findAll();
 
-    Worker findById(Integer id);
+    Worker findById(Long id);
 
-    void deleteById(Integer id);
 
 }

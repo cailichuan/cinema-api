@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface OrderExceptionService {
 
-    OrderException create(OrderException orderException);
+    OrderException create(OrderException orderException,String uuid) throws Exception;
 
-    List<OrderException> findAll();
+    List<OrderException> findAll() throws ClassNotFoundException;
 
-    void handleException(OrderException orderException);
+    void handleException(OrderException orderException,String uid) throws Exception;
 }

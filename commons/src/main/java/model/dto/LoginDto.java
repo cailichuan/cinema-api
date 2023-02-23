@@ -1,7 +1,5 @@
 package model.dto;
 
-import lombok.Data;
-
 
 public class LoginDto {
 
@@ -33,5 +31,14 @@ public class LoginDto {
 
     public void setRemember(boolean remember) {
         this.remember = remember;
+    }
+
+    @Override
+    public String toString() {
+        return "LoginDto{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", remember=" + remember +
+                '}';
     }
 }

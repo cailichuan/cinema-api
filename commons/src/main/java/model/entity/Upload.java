@@ -49,7 +49,16 @@ public class Upload {
         this.suffix = suffix;
     }
 
-    public String getFileName(String path){
-        return path+"/"+this.path+"/"+this.id+"."+this.suffix;
+    public String getFileName(){
+        return id+"."+suffix;
+    }
+
+    @Override
+    public String toString() {
+        return "Upload{" +
+                "id:" + id +
+                ", path:'" + path + '\'' +
+                ", suffix:'" + suffix + '\'' +
+                '}';
     }
 }

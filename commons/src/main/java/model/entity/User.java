@@ -17,6 +17,9 @@ public class User {
 
     private String password;
 
+    //性别
+    private Integer gender;
+
     //昵称
     private String nickname;
 
@@ -29,8 +32,8 @@ public class User {
     //个人简介
     private String info;
 
-    //用户头像URL
-    private String avatar;
+    //用户头像id
+    private Long upid;
 
     private String createAt;
 
@@ -59,6 +62,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Integer getGender() {
+        return gender;
+    }
+
+    public void setGender(Integer gender) {
+        this.gender = gender;
     }
 
     public String getNickname() {
@@ -93,12 +104,12 @@ public class User {
         this.info = info;
     }
 
-    public String getAvatar() {
-        return avatar;
+    public Long getUpid() {
+        return upid;
     }
 
-    public void setAvatar(String avatar) {
-        this.avatar = avatar;
+    public void setUpid(Long upid) {
+        this.upid = upid;
     }
 
     public String getCreateAt() {
@@ -115,5 +126,40 @@ public class User {
 
     public void setUpdateAt(String updateAt) {
         this.updateAt = updateAt;
+    }
+
+
+    public User(Long id, String username, String password, Integer gender, String nickname, String email, String birthday, String info, Long upid, String createAt, String updateAt) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.gender = gender;
+        this.nickname = nickname;
+        this.email = email;
+        this.birthday = birthday;
+        this.info = info;
+        this.upid = upid;
+        this.createAt = createAt;
+        this.updateAt = updateAt;
+    }
+
+    public User() {
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id:" + id +
+                ", username:'" + username + '\'' +
+                ", password:'" + password + '\'' +
+                ", gender:" + gender +
+                ", nickname:'" + nickname + '\'' +
+                ", email:'" + email + '\'' +
+                ", birthday:'" + birthday + '\'' +
+                ", info:'" + info + '\'' +
+                ", upid:" + upid +
+                ", createAt:'" + createAt + '\'' +
+                ", updateAt:'" + updateAt + '\'' +
+                '}';
     }
 }

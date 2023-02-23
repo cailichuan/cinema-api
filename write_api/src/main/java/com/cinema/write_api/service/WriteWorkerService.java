@@ -16,6 +16,6 @@ public interface WriteWorkerService {
 
 
 
-    void deleteById(Integer id);
+    void deleteById(Long id);
 
 }

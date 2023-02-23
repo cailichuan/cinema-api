@@ -18,7 +18,7 @@ public class Worker {
 
     private String nickname;
 
-    private String gender;
+    private Integer gender;
 
     private String phone;
 
@@ -33,7 +33,6 @@ public class Worker {
     private String createAt;
 
     private String updateAt;
-
 
     public Long getId() {
         return id;
@@ -67,11 +66,11 @@ public class Worker {
         this.nickname = nickname;
     }
 
-    public String getGender() {
+    public Integer getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(Integer gender) {
         this.gender = gender;
     }
 

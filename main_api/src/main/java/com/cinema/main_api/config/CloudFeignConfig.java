@@ -1,7 +1,9 @@
 package com.cinema.main_api.config;
 
 import com.cinema.main_api.handler.CloudResponseResultDecoder;
+import com.cinema.main_api.handler.CloudResponseResultErrorDecoder;
 import feign.codec.Decoder;
+import feign.codec.ErrorDecoder;
 import feign.optionals.OptionalDecoder;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.boot.autoconfigure.http.HttpMessageConverters;
@@ -25,5 +27,10 @@ public class CloudFeignConfig {
     public Decoder decoder(ObjectProvider<HttpMessageConverters> messageConverters){
         return new OptionalDecoder((new ResponseEntityDecoder(new CloudResponseResultDecoder(new SpringDecoder(messageConverters)))));
     }
+
+//    @Bean
+//    public ErrorDecoder errorDecoder(){
+//        return new CloudResponseResultErrorDecoder();
+//    }
 
 }

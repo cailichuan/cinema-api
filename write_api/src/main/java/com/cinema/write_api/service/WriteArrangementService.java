@@ -4,6 +4,7 @@ import model.entity.Arrangement;
 import model.vo.ArrangementVo;
 
 import java.util.List;
+import java.util.Map;
 
 public interface WriteArrangementService {
 
@@ -13,7 +14,12 @@ public interface WriteArrangementService {
 
 
 
-    void deleteById(Integer id);
+    void deleteById(Long id);
+
 
     Arrangement Update(Arrangement arrangement);
+
+    List<Integer> getSeatSeatsHaveSelected(Long id);
+
+    Arrangement findById(Long id);
 }

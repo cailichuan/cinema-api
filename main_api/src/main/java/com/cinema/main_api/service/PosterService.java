@@ -1,18 +1,20 @@
 package com.cinema.main_api.service;
 
+import model.dto.PosterDto;
 import model.entity.Poster;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
 public interface PosterService {
-    void save(Poster poster);
+    void save(PosterDto posterDto,MultipartFile file) throws Exception;
 
-    void update(Poster poster);
+    void update(PosterDto posterDto,MultipartFile file) throws Exception;
 
 
-    List<Poster> findByMap(Boolean status);
+    List<Poster> findByMap(Boolean status) throws ClassNotFoundException;
 
-    void deleteById(Integer id);
+    void deleteById(Long id,String uuid) throws Exception;
 
-    void deleteAll();
+    void deleteAll(String uuid) throws Exception;
 }

@@ -5,9 +5,51 @@
 <mapper namespace="com.cinema.write_api.mapper.WriteWorkerMapper">
 
     <insert id="insert" parameterType="Worker">
-        inset into cinema.t_worker
+        insert into cinema.t_worker
         (id,username,password,nickname,gender,phone,avatar,entry,department,createAt,updateAt)
         values
         (#{id},#{username},#{password},#{nickname},#{gender},#{phone},#{avatar},#{entry},#{department},#{createAt},#{updateAt})
     </insert>
+
+    <select id="selectByMap" parameterType="Map" resultType="Worker">
+        select * from cinema.t_worker
+        <where>
+            <if test="id!=null">
+                id = #{id}
+            </if>
+            <if test="username!=null">
+                and username = #{username}
+            </if>
+        </where>
+    </select>
+
+    <update id="update" parameterType="Worker">
+        update cinema.t_worker
+        set
+        username = #{username},
+        password = #{password},
+        nickname = #{nickname},
+        gender = #{gender},
+        phone = #{phone},
+        avatar = #{avatar},
+        entry = #{entry},
+        department = #{department},
+        createAt = #{createAt},
+        updateAt = #{updateAt}
+
+        <where>
+            <if test="id!=null">
+                id = #{id}
+            </if>
+        </where>
+    </update>
+
+    <delete id="deleteByMap" parameterType="Map">
+        delete from cinema.t_worker
+        <where>
+            <if test="id!=null">
+                id = #{id}
+            </if>
+        </where>
+    </delete>
 </mapper>

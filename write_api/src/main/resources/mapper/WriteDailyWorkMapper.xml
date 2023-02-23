@@ -5,9 +5,18 @@
 <mapper namespace="com.cinema.write_api.mapper.WriteDailyWorkMapper">
 
     <insert id="insert" parameterType="DailyWork">
-        inset into cinema.t_daily_work
+        insert into cinema.t_daily_work
         (id,type,content,createAt)
         values
         (#{id},#{type},#{content},#{createAt})
     </insert>
+
+    <delete id="deleteByMap" parameterType="Map">
+        delete from cinema.t_daily_work
+        <where>
+            <if test="id!=null">
+                id = #{id}
+            </if>
+        </where>
+    </delete>
 </mapper>

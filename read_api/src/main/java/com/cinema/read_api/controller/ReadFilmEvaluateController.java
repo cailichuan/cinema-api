@@ -3,11 +3,9 @@ package com.cinema.read_api.controller;
 import com.cinema.read_api.service.ReadFilmEvaluateService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import model.entity.FilmEvaluate;
 import model.vo.FilmEvaluateVo;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -23,9 +21,16 @@ public class ReadFilmEvaluateController {
     @GetMapping("")
     @ApiOperation("获取电影评论")
     public List<FilmEvaluateVo> list(@RequestParam(name = "fid") Long fid) {
-        if (fid != null) {
+
             return readFilmEvaluateService.findAllByFilmId(fid);
-        }
-        return null;
+
+    }
+
+
+    @PostMapping("")
+    @ApiOperation("根据id获取电影评论")
+    public FilmEvaluate findById(@RequestParam(name = "id") Long id){
+
+        return readFilmEvaluateService.findById(id);
     }
 }

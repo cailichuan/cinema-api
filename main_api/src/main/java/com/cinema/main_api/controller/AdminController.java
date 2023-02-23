@@ -3,8 +3,8 @@ package com.cinema.main_api.controller;
 
 import com.cinema.main_api.service.AdminService;
 import io.swagger.annotations.Api;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -17,4 +17,11 @@ public class AdminController {
     private AdminService adminService;
 
 
+
+    @GetMapping("/{id}")
+    public Integer getId(@PathVariable("id") Long id){
+        adminService.test(id);
+
+        return 11;
+    }
 }

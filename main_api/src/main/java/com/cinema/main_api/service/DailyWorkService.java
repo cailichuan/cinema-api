@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface DailyWorkService {
 
-    void save(DailyWork dailyWork);
+    void save(DailyWork dailyWork,String uuid) throws Exception;
 
-    List<DailyWork> findAll();
+    List<DailyWork> findAll() throws ClassNotFoundException;
 
-    void deleteById(Integer id);
+    void deleteById(Long id,String uuid) throws Exception;
 }

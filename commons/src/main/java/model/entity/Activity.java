@@ -1,13 +1,17 @@
 package model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
 
 /**
  * 影院活动
  */
 
-public class Activity {
+
+public class Activity{
 
     private Long id;
 
@@ -73,12 +77,12 @@ public class Activity {
     @Override
     public String toString() {
         return "Activity{" +
-                "id=" + id +
-                ", content='" + content + '\'' +
-                ", number=" + number +
-                ", startTime='" + startTime + '\'' +
-                ", endTime='" + endTime + '\'' +
-                ", createAt='" + createAt + '\'' +
+                "id:" + id +
+                ", content:'" + content + '\'' +
+                ", number:" + number +
+                ", startTime:'" + startTime + '\'' +
+                ", endTime:'" + endTime + '\'' +
+                ", createAt:'" + createAt + '\'' +
                 '}';
     }
 }

@@ -5,25 +5,46 @@
 <mapper namespace="com.cinema.write_api.mapper.WriteArrangementMapper">
 
     <insert id="insert" parameterType="Arrangement">
-        inset into cinema.t_arrangement
+        insert into cinema.t_arrangement
         (id,fid,name,seatNumber,price,type,date,startTime,boxOffice,endTime,founder,creaTeAt)
         values
         (#{id},#{fid},#{name},#{seatNumber},#{price},#{type},#{date},#{startTime},#{boxOffice},#{endTime},#{founder},#{createAt})
     </insert>
 
-    <delete id="deleteById" parameterType="Integer">
+    <delete id="deleteByMap" parameterType="Map">
         delete from cinema.t_arrangement
-        where id = #{id}
+        <where>
+            <if test="id!=null">
+                id = #{id}
+            </if>
+        </where>
     </delete>
 
     <update id="update" parameterType="Arrangement">
         update cinema.t_arrangement
         set
-        fid=#{fid},name=#{name},seatNumber=#{seatNumber},price=#{price},type=#{type},
-        date=#{date},startTime=#{startTime},boxOffice=#{boxOffice},endTime=#{endTime},
+        fid=#{fid},
+        name=#{name},
+        seatNumber=#{seatNumber},
+        price=#{price},
+        type=#{type},
+        date=#{date},
+        startTime=#{startTime},
+        boxOffice=#{boxOffice},
+        endTime=#{endTime},
         founder=#{founder},createAt=#{createAt}
         where id=#{id}
 
     </update>
+
+    <select id="selectByMap" parameterType="Map" resultType="Arrangement">
+        select *
+        from cinema.t_arrangement
+        <where>
+            <if test="id!=null">
+                id = #{id}
+            </if>
+        </where>
+    </select>
 
 </mapper>

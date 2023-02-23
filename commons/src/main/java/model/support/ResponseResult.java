@@ -56,6 +56,14 @@ public class ResponseResult <T>{
         return success;
     }
 
+    public Integer getCode() {
+        return code;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
     public T getData() {
         return (T)data;
     }

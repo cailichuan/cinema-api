@@ -83,4 +83,17 @@ public class Cart {
     public void setPrice(Double price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "Cart{" +
+                "id:" + id +
+                ", uid:" + uid +
+                ", aid:" + aid +
+                ", seats:'" + seats + '\'' +
+                ", phone:'" + phone + '\'' +
+                ", status:" + status +
+                ", price:" + price +
+                '}';
+    }
 }

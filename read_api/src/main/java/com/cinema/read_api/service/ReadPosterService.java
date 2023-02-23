@@ -11,4 +11,5 @@ public interface ReadPosterService {
     List<Poster> findByMap(Map map);
 
 
+
 }

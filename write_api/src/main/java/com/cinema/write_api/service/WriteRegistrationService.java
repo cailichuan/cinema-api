@@ -9,5 +9,5 @@ public interface WriteRegistrationService {
 
 
 
-    void deleteById(Integer id);
+    void deleteById(Long id);
 }

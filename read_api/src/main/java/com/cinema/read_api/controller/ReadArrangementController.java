@@ -6,7 +6,9 @@ import com.cinema.read_api.service.ReadFilmService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import model.entity.Arrangement;
+import model.entity.Film;
 import model.vo.ArrangementVo;
+import model.vo.OneArrangementVo;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,13 +37,14 @@ public class ReadArrangementController {
     }
 
     @GetMapping("/{id}")
-    @ApiOperation("查询排片")
-    public Map<String,Object> findById(@PathVariable(value = "id")Long id){
+    @ApiOperation("根据id查询排片")
+    public OneArrangementVo findById(@PathVariable(value = "id")Long id){
         Map<String,Object> map = new HashMap<>();
         Arrangement arrangement = readArrangementService.findById(id);
-        map.put("film",readFilmService.findById(arrangement.getFid()));
-        map.put("arrangement",arrangement);
-        return map;
+        Film film = readFilmService.findById(arrangement.getFid());
+        OneArrangementVo oneArrangementVo = new OneArrangementVo(film, arrangement);
+
+        return oneArrangementVo;
     }
 
     @GetMapping("/{id}/getSeats")

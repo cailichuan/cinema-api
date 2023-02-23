@@ -3,11 +3,9 @@ package com.cinema.read_api.controller;
 import com.cinema.read_api.service.ReadCartService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import model.entity.Cart;
 import model.vo.CartVo;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -26,5 +24,11 @@ public class ReadCartController {
 
         return readCartService.findAllByUserId(uid);
 
+    }
+
+    @PostMapping("")
+    @ApiOperation("根据id查询购物车")
+    public Cart findById(@RequestParam(name = "id") Long id){
+        return readCartService.findById(id);
     }
 }

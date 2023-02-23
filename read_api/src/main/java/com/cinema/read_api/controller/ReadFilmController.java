@@ -23,14 +23,14 @@ public class ReadFilmController {
 
     @GetMapping("")
     @ApiOperation("列出所有电影")
-    public List<Film> list(@RequestParam(name = "region" ,required = false) String region, @RequestParam(name = "type",required = false) Integer type) {
+    public List<Film> list(@RequestParam(name = "region" ,required = false) String region, @RequestParam(name = "type",required = false) String type) {
 
-        Map<String,Object> map = new HashMap<>();
+        Map<String,String> map = new HashMap<>();
         if (region != null && !region.equals("") && !region.equals("全部")){
             map.put("region",region);
         }
 
-        if (type!=null){
+        if (type!=null && !type.equals("全部")){
             map.put("type",type);
         }
 

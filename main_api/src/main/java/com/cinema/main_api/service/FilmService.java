@@ -6,21 +6,21 @@ import java.util.List;
 
 public interface FilmService {
 
-    void save(Film film);
+    void save(Film film,String uuid) throws Exception;
 
-    void deleteById(Long id);
+    void deleteById(Long id,String uuid) throws Exception;
 
     List<Film> findAll();
 
-    List<Film> findByRegionAndType(String region,Integer type);
+    List<Film> findByRegionAndType(String region,String type) throws ClassNotFoundException;
 
     //获取热门电影
-    List<Film> findHots(Integer limit);
+    List<Film> findHots(Integer limit) throws ClassNotFoundException;
 
     //根据电影名模糊查询
-    List<Film> findLikeName(String name);
+    List<Film> findLikeName(String name) throws ClassNotFoundException;
 
-    Film findById(Long id);
+    Film findById(Long id) throws ClassNotFoundException;
 
-    Film update(Film film);
+    Film update(Film film,String uuid) throws Exception;
 }

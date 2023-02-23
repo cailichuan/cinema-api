@@ -14,5 +14,7 @@ public interface ReadOrderMapper {
 
     List<Order> selectListByMap(Map map);
 
+    Order selectListById(Long id);
+
 
 }

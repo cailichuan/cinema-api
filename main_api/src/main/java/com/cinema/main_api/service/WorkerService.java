@@ -8,16 +8,16 @@ import java.util.List;
 
 public interface WorkerService {
 
-    Worker create(Worker worker) throws Exception;
+    Worker create(Worker worker,String uuid) throws Exception;
 
     Worker login(LoginDto dto) throws Exception;
 
-    void update(Worker worker) throws Exception;
+    void update(Worker worker,String uuid) throws Exception;
 
-    List<Worker> findAll();
+    List<Worker> findAll() throws ClassNotFoundException;
 
-    Worker findById(Integer id);
+    Worker findById(Long id) throws ClassNotFoundException;
 
-    void deleteById(Integer id);
+    void deleteById(Long id,String uuid) throws Exception;
 
 }

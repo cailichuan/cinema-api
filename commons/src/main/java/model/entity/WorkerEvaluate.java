@@ -21,9 +21,9 @@ public class WorkerEvaluate {
     private String content;
 
     //满意 非常满意
-    private String type;
+    private Integer type;
 
-    private String creatAt;
+    private String createAt;
 
 
     public Long getId() {
@@ -58,19 +58,31 @@ public class WorkerEvaluate {
         this.content = content;
     }
 
-    public String getType() {
+    public Integer getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(Integer type) {
         this.type = type;
     }
 
-    public String getCreatAt() {
-        return creatAt;
+    public String getCreateAt() {
+        return createAt;
     }
 
-    public void setCreatAt(String creatAt) {
-        this.creatAt = creatAt;
+    public void setCreateAt(String createAt) {
+        this.createAt = createAt;
+    }
+
+    @Override
+    public String toString() {
+        return "WorkerEvaluate{" +
+                "id:" + id +
+                ", wid:" + wid +
+                ", uid:" + uid +
+                ", content:'" + content + '\'' +
+                ", type:" + type +
+                ", createAt:'" + createAt + '\'' +
+                '}';
     }
 }

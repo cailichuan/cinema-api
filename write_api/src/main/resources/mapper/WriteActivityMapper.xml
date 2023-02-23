@@ -10,17 +10,35 @@
         (#{id},#{content},#{number},#{startTime},#{endTime},#{createAt})
     </insert>
 
-
-
-    <select id="selectById" parameterType="Integer" resultType="Activity">
-        select *
+    <delete id="deleteByMap" parameterType="Map">
+        delete
         from cinema.t_activity
+        <where>
+            <if test="id!=null">
+                id = #{id}
+            </if>
+        </where>
+    </delete>
+
+    <update id="update" parameterType="Activity">
+        update cinema.t_activity
+        set
+        content = #{content},
+        number = #{number},
+        startTime = #{startTime},
+        endTime = #{endTime},
+        createAt = #{createAt}
         where id = #{id}
-    </select>
+    </update>
 
-    <select id="selectList" resultType="Activity">
+    <select id="selectByMap" parameterType="Map" resultType="Activity">
         select *
         from cinema.t_activity
+        <where>
+            <if test="id!=null">
+                id = #{id}
+            </if>
+        </where>
     </select>
 
 </mapper>

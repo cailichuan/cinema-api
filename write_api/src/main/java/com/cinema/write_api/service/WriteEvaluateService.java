@@ -9,10 +9,10 @@ public interface WriteEvaluateService {
 
     void save(WorkerEvaluate workerEvaluate);
 
-    void deleteById(Integer id);
+    void deleteById(Long id);
 
     //删除该客服的所有评价
-    void deleteAllByWid(Integer wid);
+    void deleteAllByWid(Long wid);
 
 
 

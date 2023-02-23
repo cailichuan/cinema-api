@@ -9,30 +9,37 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
+import java.io.IOException;
 
 
 @Service
 public class UploadServiceImpl implements UploadService {
 
-    @Resource
-    private WriteApi writeApi;
 
     @Resource
     private ReadApi readApi;
 
+    @Resource
+    private WriteApi writeApi;
+
     @Override
-    public Integer checkAndSaveUpload(MultipartFile file,String path) {
-        return writeApi.savaUpload(file,path);
+    public Long checkAndSaveUpload(MultipartFile file,String path,String uuid) throws Exception {
+
+
+
+
+        return writeApi.savaUpload(file,path,uuid);
     }
 
 
     @Override
-    public String getFileNameById(Long id) {
-        return readApi.findUploadFileNameById(id);
+    public byte[] getFileById(Long id) throws IOException {
+        return readApi.findUploadFileById(id);
     }
 
     @Override
-    public void deleteById(Long id) {
+    public void deleteById(Long id,String uuid) throws Exception {
 
+        writeApi.deleteUpload(id,uuid);
     }
 }

@@ -11,4 +11,6 @@ public interface ReadCartService {
 
     List<CartVo> findAllByUserId(Long id);
 
+    Cart findById(Long id);
+
 }

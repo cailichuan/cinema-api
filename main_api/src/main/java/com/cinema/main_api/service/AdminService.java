@@ -5,4 +5,6 @@ import model.dto.LoginDto;
 public interface AdminService {
 
     String login(LoginDto loginDto);
+
+    String test(Long id);
 }

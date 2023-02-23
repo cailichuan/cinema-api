@@ -5,9 +5,19 @@
 <mapper namespace="com.cinema.write_api.mapper.WriteLeavingMessageMapper">
 
     <insert id="insert" parameterType="LeavingMessage">
-        inset into cinema.t_leaving_message
+        insert into cinema.t_leaving_message
         (id,uid,reply,content,createAt)
         values
         (#{id},#{uid},#{reply},#{content},#{createAt})
     </insert>
+
+    <update id="update" parameterType="LeavingMessage">
+        update cinema.t_leaving_message
+        set
+        uid = #{uid},
+        reply = #{reply},
+        content = #{content},
+        createAt = #{createAt}
+        where id = #{id}
+    </update>
 </mapper>

@@ -41,7 +41,6 @@ public class FilmEvaluateVo {
         this.user = user;
     }
 
-
     public FilmEvaluateVo(Long id, FilmEvaluate filmEvaluate, User user) {
         this.id = id;
         this.filmEvaluate = filmEvaluate;
